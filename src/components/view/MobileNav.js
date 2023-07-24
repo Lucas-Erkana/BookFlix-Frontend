@@ -13,7 +13,7 @@ import {
   FaSignOutAlt,
 } from 'react-icons/fa';
 import { AiOutlineUserAdd } from 'react-icons/ai';
-import logo from '../../assets/images/handymate-logo.png';
+import logo from '../../assets/images/bookflix-logo.png';
 
 const MobileNav = () => {
   const navigate = useNavigate();
