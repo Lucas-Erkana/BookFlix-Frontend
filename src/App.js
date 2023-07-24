@@ -7,13 +7,13 @@ import './assets/styles/App.css';
 
 function App() {
   return (
-  <div className="container-fluid col-md-12 d-flex p-0">
-    <Routes>
-     <Route path="/" element={<LayOut />}>
-       <Route index  element={<Movie />} />
-     </Route>
-    </Routes>
-  </div>
+    <div className="container-fluid col-md-12 d-flex p-0">
+      <Routes>
+        <Route path="/" element={<LayOut />}>
+          <Route index element={<Movie />} />
+        </Route>
+      </Routes>
+    </div>
   );
 }
 

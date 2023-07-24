@@ -33,9 +33,9 @@ const NavPanel = () => {
           </a>
 
           <ul className="nav flex-column mt-3">
-              <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to='/'>Movies</NavLink>
-              </li>
+            <li className="nav-item">
+              <NavLink className="nav-link ms-3 p-2" to="/">Movies</NavLink>
+            </li>
             {isLoggedIn && (
             <>
               <li className="nav-item">
