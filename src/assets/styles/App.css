@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul{
+    list-style-type: none;
+}
+.login,.signup{
+    font-size: small;
+    border: 1px solid #98bf11;
+    color: #98bf11
+}
+.login:hover,.signup:hover{
+    background-color: #98bf11;
+    color: white;
+}
+.nav-link{
+    font-size: 20px;
+    font-weight: 450;
+    text-align: left;
+    text-transform: uppercase;
+    color: #212529;
+}
+.nav-link:hover{
+    background-color: #98bf11;
+    color: white;
+}
+.mobile-nav {
+    display: block;
+    background-color: transparent;
+  }
+  .navbar-toggler {
+    border: none;
+
+  }
+  .bg-light{
+    background-color: transparent;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none;
+  }
+@media screen and (min-width: 768px) {
+    .mobile-nav {
+      display: none;
+    }
+}
+

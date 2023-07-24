@@ -1,0 +1,19 @@
+.main-nav{
+    max-width: 250px;
+    border-right: 1px solid #e7e7e7;
+}
+.sidebar{
+    min-height: 100vh;
+}
+.site-logo {
+    width: 80%;
+}
+.social-link{
+    font-size: 24px;
+}
+@media screen and (max-width: 768px) {
+    .main-nav{
+        display: none;
+    }
+}
+
