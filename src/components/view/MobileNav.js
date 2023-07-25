@@ -38,7 +38,7 @@ const MobileNav = () => {
           key={expand}
           bg="light"
           expand={expand}
-          className="mb-3 mobile-nav "
+          className="mb-3 mobile-nav"
         >
           <Container className="mobile-nav-container" fluid>
             <Navbar.Toggle
@@ -64,7 +64,7 @@ const MobileNav = () => {
                     onClick={handleOffcanvasClose}
                     href="/"
                   >
-                    Services
+                    Movies
                   </Nav.Link>
                   {isLoggedIn && (
                     <>
@@ -89,16 +89,16 @@ const MobileNav = () => {
                       <Nav.Link
                         className="nav-link"
                         onClick={handleOffcanvasClose}
-                        href="/add-service"
+                        href="/add-movie"
                       >
-                        Add Service
+                        Add Movie
                       </Nav.Link>
                       <Nav.Link
                         className="nav-link"
                         onClick={handleOffcanvasClose}
-                        href="/delete-services"
+                        href="/delete-movies"
                       >
-                        Delete Service
+                        Delete Movies
                       </Nav.Link>
                     </>
                   )}
