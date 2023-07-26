@@ -1,0 +1,28 @@
+.add-movie-container {
+  background:
+    linear-gradient(0deg, rgb(146 185 10 / 88%), rgb(146 185 12 / 88%)),
+    url("../images/add-movie.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
+
+.add-movie-div {
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.add-movie-form .form-control {
+  border-radius: 2rem;
+}
+
+.add-btn {
+  background-color: #98bf11;
+  color: white;
+  border-radius: 20px;
+}
+
+.cancel-add-btn {
+  border-radius: 20px;
+}

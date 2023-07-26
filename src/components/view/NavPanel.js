@@ -16,7 +16,7 @@ const NavPanel = () => {
   // ];
 
   const navigate = useNavigate();
-  const isLoggedIn = false;
+  const isLoggedIn = true;
   const isAdmin = true;
 
   const handleLogout = () => {
@@ -50,10 +50,10 @@ const NavPanel = () => {
             {isLoggedIn && isAdmin && (
             <>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to="/add-service">Add Service</NavLink>
+                <NavLink className="nav-link ms-3 p-2" to="/add-movie">Add Movie</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to="/delete-services">Delete Service</NavLink>
+                <NavLink className="nav-link ms-3 p-2" to="/delete-movies">Delete Movies</NavLink>
               </li>
             </>
             )}

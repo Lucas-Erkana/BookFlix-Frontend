@@ -13,6 +13,10 @@ ul {
   list-style-type: none;
 }
 
+.container-fluid {
+  padding: 0;
+}
+
 .login,
 .signup {
   font-size: small;
@@ -39,6 +43,11 @@ ul {
   color: white;
 }
 
+.nav-link.active {
+  background-color: #98bf11;
+  color: white;
+}
+
 .mobile-nav {
   display: block;
   background-color: transparent;
@@ -46,14 +55,62 @@ ul {
 
 .navbar-toggler {
   border: none;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 1;
 }
 
-.bg-light {
-  background-color: transparent;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30' width='40' height='40'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .navbar-toggler:focus {
   box-shadow: none;
+}
+
+.form-control {
+  background: transparent;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+.form-control:focus {
+  border: white;
+  box-shadow: none;
+}
+
+.form-control:focus::placeholder {
+  color: #343a40;
+}
+
+.add-movie {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.add-movie:hover {
+  background-color: white;
+  color: rgb(25, 135, 84);
+}
+
+.cancel-add {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.cancel-add:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.add-price-input {
+  background-color: transparent;
+  border-radius: 2rem;
 }
 
 @media screen and (min-width: 768px) {
