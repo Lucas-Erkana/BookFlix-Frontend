@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import MoviesSlice from './MoviesSlice';
-import userReducer from './UsersSlice'; // <-- Add the file extension here
+// eslint-disable-next-line import/extensions
+import userReducer from './UsersSlice';
 
 const store = configureStore({
   reducer: {
