@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../user_form/Login';
 // import PropTypes from 'prop-types';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import {
@@ -21,7 +22,7 @@ const NavPanel = () => {
 
   const handleLogout = () => {
     localStorage.clear();
-    navigate('/signin');
+    navigate('/Login');
   };
 
   return (
@@ -77,7 +78,7 @@ const NavPanel = () => {
                   <NavLink to="/signin" className="login btn btn-small">
                     <FaSignInAlt />
                     &nbsp;
-                    Log In
+                    <Login/>
                   </NavLink>
                 </li>
                 <li className="nav-item">
