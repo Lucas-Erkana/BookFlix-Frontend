@@ -6,7 +6,7 @@ import {
 } from 'react-icons/fa';
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import logo from '../../assets/images/bookflix-logo.png';
-import '../../assets/styles/NavPanel.css';
+
 // import isAuthenticated from './auth';
 // import Admin from './IsAdmin';
 

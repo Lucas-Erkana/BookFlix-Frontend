@@ -1,0 +1,203 @@
+.reservation-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.reservation-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+  .image-and-text {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+
+    .service-thumb {
+      height: 100px;
+      width: 100px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .reservation-card-details {
+      text-align: center;
+    }
+  }
+}
+
+.fa-angle-down {
+  color: white;
+}
+
+.reservation-form-body {
+  background-image: url("https://source.unsplash.com/random/?lightgreen,abstract");
+  background-size: cover;
+  background-position: center;
+}
+
+.reservation-form-overlay {
+  background-color: rgba(12, 12, 12, 0.88); //color for background
+  height: 100%;
+
+  .heading {
+    letter-spacing: 8px;
+    font-size: 1rem;
+  }
+}
+
+.select-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input:disabled {
+  background-color: rgba(255, 253, 253, 0.184) !important;
+  border: 2px solid rgba(128, 128, 128, 0.556) !important;
+}
+
+#reservation-form {
+  .input-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  color: white;
+
+  label {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 55vw;
+  }
+
+  button[type="submit"],
+  input,
+  .select-wrapper {
+    border-radius: 50px;
+  }
+
+  input,
+  .select-wrapper {
+    background-color: rgba(0, 0, 0, 0.175);
+    border: 2px solid white;
+    color: white;
+    padding: 0 7%;
+    width: 100%;
+  }
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+
+  option {
+    color: black;
+  }
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+.service-image-in-form {
+  width: 300px;
+}
+
+.service-name-in-form {
+  font-weight: bold;
+  background-color: $primary;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  padding: 8px;
+}
+
+@media screen and (min-width: 1024px) {
+  .reservation-card {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+    .image-and-text {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: 8px;
+    }
+
+    .service-thumb {
+      height: 50px !important;
+      width: 50px !important;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .reservation-card-details {
+      text-align: left;
+    }
+
+    .card-column {
+      display: none;
+      //   display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 16%;
+
+      span {
+        padding: 4px;
+        width: 100%;
+
+        &:first-child {
+          background-color: rgb(184, 139, 23);
+          color: white;
+          border-radius: 4px 4px 0 0;
+        }
+
+        &:last-child {
+          background-color: lightgray;
+        }
+      }
+    }
+  }
+
+  .reservation-form-overlay {
+    .heading {
+      font-size: 1.5rem;
+    }
+  }
+
+  #reservation-form {
+    width: 50vw;
+
+    .input-row {
+      display: flex;
+      flex-direction: row;
+      gap: 40px;
+    }
+
+    .select-wrapper {
+      width: 11rem;
+    }
+
+    label {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

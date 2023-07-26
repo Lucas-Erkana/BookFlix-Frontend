@@ -4,7 +4,7 @@ import LayOut from './components/view/LayOut';
 import Movie from './components/routes/Movie';
 import AddMovie from './components/routes/AddMovie';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './assets/styles/App.css';
+import './assets/styles/custom.scss';
 
 function App() {
   return (

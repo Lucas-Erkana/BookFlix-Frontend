@@ -1,0 +1,20 @@
+.delete-card {
+  border-radius: 2rem;
+  border: 1px solid var(--gray-color);
+  box-shadow: 1px 2px 4px #aaa;
+}
+
+.delete-img {
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  transition: 300ms ease;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.delete-btn {
+  border-radius: 1rem;
+}

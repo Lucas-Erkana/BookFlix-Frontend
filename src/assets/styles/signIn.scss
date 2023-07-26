@@ -1,0 +1,177 @@
+// aside {
+//   display: none;
+// }
+.login {
+  background-image: url("../../assets/images/signin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.side-image {
+  background-image: url("../../assets/images/signup.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.side-image2 {
+  background-image: url("../../assets/images/signin.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+.sign__right {
+  width: 38%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+}
+
+.input-box {
+  width: 400px;
+  margin-top: 40px;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.intro__text {
+  margin-bottom: 2px;
+  font-style: italic;
+}
+
+.book {
+  color: $primary;
+  font-weight: bold;
+}
+
+.line {
+  display: block;
+  border-bottom: 3px solid $primary;
+  width: 30%;
+  height: 3px;
+  margin-bottom: 30px;
+}
+
+.sign-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sign-form__input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 1rem;
+  border: 2px solid $primary;
+  border-radius: 30px;
+  font-size: 1rem;
+}
+
+.sign-in {
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+}
+
+.session-link-btn {
+  color: $primary;
+  text-decoration: none;
+}
+
+.session-overlay {
+  background-color: rgba(255, 255, 255, 0.85);
+  height: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .session-overlay {
+    width: 100%;
+  }
+
+  .login {
+    width: 100vw;
+  }
+
+  .side-image {
+    height: 30vh;
+    width: 100vw;
+  }
+
+  .side-image2 {
+    height: 30vh;
+    width: 100vw;
+  }
+
+  .sign__right {
+    margin: 0;
+    height: auto;
+  }
+
+  .input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro {
+    margin-bottom: 20px;
+  }
+
+  .input-field {
+    display: flex;
+    align-items: center;
+  }
+
+  .sign-form__input {
+    width: 80%;
+    padding: 7px 15px;
+  }
+
+  .intro__title {
+    font-size: 18px;
+  }
+
+  .book {
+    color: $primary;
+    font-weight: bold;
+  }
+  
+
+  .intro__text {
+    font-size: 15px;
+  }
+
+  .line {
+    width: 40%;
+  }
+
+  .btn {
+    width: 50%;
+  }
+
+  .sign-in {
+    font-size: 15px;
+  }
+}

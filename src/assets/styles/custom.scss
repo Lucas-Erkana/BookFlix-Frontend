@@ -1,0 +1,200 @@
+$primary: #98bf11 !default;
+$gray: #efefef;
+$gray-font: #adadaf;
+
+@import "~bootstrap/scss/bootstrap.scss";
+@import "./reservation.scss";
+@import "./homepage.scss";
+@import "./details.scss";
+@import "./signIn.scss";
+@import "./nav.scss";
+@import "./delete-service-style.scss";
+@import "./add-service-style.scss";
+@import "./AddMovie.scss";
+@import "./NavPanel.scss";
+@import "./App.scss";
+
+:root {
+  --primary-color: $primary;
+  --gray-color-font: $gray-font;
+  --gray-color: $gray;
+}
+
+#root {
+  font-family: sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn,
+button {
+  width: max-content !important;
+}
+
+.main-nav {
+  max-width: 250px;
+}
+
+.site-logo {
+  width: 80%;
+  padding-left: 24px;
+}
+
+.sidebar {
+  min-height: 100vh;
+  padding-top: 50px;
+}
+
+.slide {
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+
+  img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+// gaps
+
+.g-1 {
+  gap: 0.25rem;
+}
+
+.g-2 {
+  gap: 0.5rem;
+}
+
+.g-3 {
+  gap: 0.75rem;
+}
+
+.g-4 {
+  gap: 1rem;
+}
+
+.g-5 {
+  gap: 1.25rem;
+}
+
+.g-6 {
+  gap: 1.5rem;
+}
+
+.g-7 {
+  gap: 1.75rem;
+}
+
+.g-8 {
+  gap: 2rem;
+}
+
+.g-9 {
+  gap: 2.25rem;
+}
+
+.g-10 {
+  gap: 2.5rem;
+}
+
+.g-11 {
+  gap: 2.75rem;
+}
+
+.g-12 {
+  gap: 3rem;
+}
+
+.g-13 {
+  gap: 3.25rem;
+}
+
+.g-14 {
+  gap: 3.5rem;
+}
+
+.g-15 {
+  gap: 3.75rem;
+}
+
+.g-16 {
+  gap: 4rem;
+}
+
+// Navbar.scss
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 24px;
+  height: 1px;
+  background-color: transparent;
+  position: relative;
+  transition: background-color 0.3s ease;
+
+  &::before,
+  &::after {
+    content: "";
+    width: 24px;
+    height: 4px;
+    background-color: rgb(107, 107, 107);
+    position: absolute;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  &::before {
+    top: -6px;
+  }
+
+  &::after {
+    top: 6px;
+  }
+}
+
+.btn-sidebar-toggle,
+.mobile-nav-toggle {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+
+  &.active {
+    .hamburger-icon {
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(45deg);
+        top: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+        top: 0;
+      }
+    }
+  }
+}
+
+.container-main {
+  min-height: 100vh;
+}
+
+.rounded-pill {
+  border-radius: 50px;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}

@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { addMovie } from '../../redux/MoviesSlice';
 import { storage } from '../../firebaseConfig';
-import '../../assets/styles/AddMovie.css';
 
 const AddMovie = () => {
   const [name, setName] = useState('');

@@ -1,0 +1,35 @@
+.add-service-container {
+  background:
+    linear-gradient(0deg, rgb(94 23 235 / 88%), rgb(144 73 255 / 88%)),
+    url("https://wallpaperaccess.com/full/5485715.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
+
+.add-service-div {
+  width: 70%;
+  border-radius: 1rem;
+}
+
+.add-service-form .form-control {
+  border-radius: 2rem;
+  border-color: var(--primary-color);
+}
+
+.add-price-input {
+  background-color: white;
+  color: var(--gray-color);
+  border-radius: 2rem;
+}
+
+.add-btn {
+  background-color: #98bf11;
+  color: white;
+  border-radius: 20px;
+}
+
+.cancel-add-btn {
+  border-radius: 20px;
+}
