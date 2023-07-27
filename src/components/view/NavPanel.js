@@ -1,4 +1,5 @@
 import React from 'react';
+
 // import PropTypes from 'prop-types';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import {
@@ -77,7 +78,7 @@ const NavPanel = () => {
                   <NavLink to="/signin" className="login btn btn-small">
                     <FaSignInAlt />
                     &nbsp;
-                    Log In
+                    Login
                   </NavLink>
                 </li>
                 <li className="nav-item">
