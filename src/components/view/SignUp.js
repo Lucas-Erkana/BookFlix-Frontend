@@ -44,11 +44,7 @@ const SignUp = () => {
         <div className="input-box col-md d-flex flex-column align-items-center justify-content-center">
           <div className="intro">
             <span className="line" />
-            <h4 className="intro__title">
-              Welcome to
-              <span className="book">Book</span>
-              Flix
-            </h4>
+            <h4 className="intro__title">Welcome to <span className="book">Book</span>Flix</h4>
             <p className="intro__text">Available For Home Viewing</p>
             <p className="intro__text">Signup to get started!</p>
           </div>
