@@ -1,6 +1,4 @@
 import React from 'react';
-
-// import PropTypes from 'prop-types';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import {
   FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaSignInAlt, FaSignOutAlt,
@@ -8,17 +6,19 @@ import {
 import { AiOutlineUserAdd } from 'react-icons/ai';
 import logo from '../../assets/images/bookflix-logo.png';
 
-// import isAuthenticated from './auth';
-// import Admin from './IsAdmin';
-
 const NavPanel = () => {
-  // const links = [
-  //   { id: 1, name: 'Services', path: '/' },
-  // ];
 
   const navigate = useNavigate();
-  const isLoggedIn = true;
-  const isAdmin = true;
+  const isAuthenticated = () => {
+    const token = localStorage.getItem('token');
+    return !!token;
+  };
+  const Admin = () => {
+    const role = localStorage.getItem('role');
+    return role === 'admin';
+  };
+  const isLoggedIn = isAuthenticated();
+  const isAdmin = Admin();
 
   const handleLogout = () => {
     localStorage.clear();
@@ -75,7 +75,7 @@ const NavPanel = () => {
             ) : (
               <>
                 <li>
-                  <NavLink to="/signin" className="login btn btn-small">
+                  <NavLink to="/signin" className="login-btn btn btn-small">
                     <FaSignInAlt />
                     &nbsp;
                     Login
@@ -116,9 +116,5 @@ const NavPanel = () => {
     </aside>
   );
 };
-
-// Navbar.propTypes = {
-//   sidebarOpen: PropTypes.bool.isRequired,
-// };
 
 export default NavPanel;
