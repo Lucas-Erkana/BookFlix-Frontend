@@ -6,7 +6,7 @@ import { fetchLocations } from '../../redux/LocationsSlice';
 import { fetchServices } from '../../redux/ServicesSlice';
 
 const ReservationForm = () => {
-  const { id } = useParams(); // Extract the serviceId from the URL path
+  const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const locations = useSelector((state) => state.locations.locations);
