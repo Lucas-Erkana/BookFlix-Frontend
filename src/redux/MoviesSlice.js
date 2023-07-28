@@ -19,13 +19,13 @@ const moviesSlice = createSlice(
 export const { setMovies } = moviesSlice.actions;
 
 const fetchMovies = () => async (dispatch) => {
-  const response = await fetch('http://localhost:3000/api/v1/services');
+  const response = await fetch('https://book-flix.onrender.com/api/v1/services');
   const data = await response.json();
   dispatch(setMovies(data));
 };
 
 const addMovie = (movie) => async (dispatch) => {
-  await fetch('http://localhost:3000/api/v1/services', {
+  await fetch('https://book-flix.onrender.com/api/v1/services', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ const addMovie = (movie) => async (dispatch) => {
 };
 
 const deleteMovie = (id) => async (dispatch) => {
-  await fetch(`http://localhost:3000/api/v1/services/${id}`, {
+  await fetch(`https://book-flix.onrender.com/api/v1/services/${id}`, {
     method: 'DELETE',
   });
   dispatch(fetchMovies());
