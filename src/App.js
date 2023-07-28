@@ -8,6 +8,7 @@ import SignUp from './components/view/SignUp';
 import Details from './components/view/Details';
 import Reservations from './components/view/Reservations';
 import ReservationForm from './components/view/ReservationForm';
+import DeleteMovie from './components/view/DeleteMovie';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/custom.scss';
 
@@ -23,6 +24,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/reservations" element={<Reservations />} />
           <Route path="/reserve" element={<ReservationForm />} />
+          <Route path="/delete-movie" element={<DeleteMovie />} />
         </Route>
       </Routes>
     </div>
