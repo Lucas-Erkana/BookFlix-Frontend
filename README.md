@@ -48,7 +48,7 @@
 - Here is the link of the [Back-End](https://github.com/Lucash2022/BookFlix-Backend)
 
 ### Initial State of Kanban Board
-![kanban]()
+![KanBan3](https://github.com/Lucash2022/BookFlix-Backend/assets/41428579/32a756e4-2194-4e96-a5c7-dd5a76f199c0)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
