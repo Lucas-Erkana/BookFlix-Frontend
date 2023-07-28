@@ -13,16 +13,55 @@
   border-radius: 1rem;
 }
 
+.form-control {
+  background: transparent;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+.form-control:focus {
+  border: white;
+  box-shadow: none;
+}
+
+.form-control:focus::placeholder {
+  color: #343a40;
+}
+
 .add-movie-form .form-control {
   border-radius: 2rem;
 }
 
-.add-btn {
-  background-color: #98bf11;
-  color: white;
-  border-radius: 20px;
+.add-movie,
+.cancel-add {
+  padding: 0.375rem 3rem;
 }
 
-.cancel-add-btn {
-  border-radius: 20px;
+.add-movie {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.add-movie:hover {
+  background-color: white;
+  color: rgb(25, 135, 84);
+}
+
+.cancel-add {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.cancel-add:hover {
+  background-color: #dc3545;
+  color: white;
+}
+
+.add-price-input {
+  background-color: transparent;
+  border-radius: 2rem;
 }

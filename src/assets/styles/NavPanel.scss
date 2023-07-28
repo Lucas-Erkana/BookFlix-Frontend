@@ -11,6 +11,42 @@
   width: 80%;
 }
 
+.login-btn,
+.signup {
+  font-size: small;
+  border: 1px solid #98bf11;
+  color: #98bf11;
+}
+
+.login-btn:hover,
+.signup:hover {
+  background-color: #98bf11;
+  color: white;
+}
+
+.btn.active {
+  background-color: #98bf11;
+  color: white;
+}
+
+.nav-link {
+  font-size: 20px;
+  font-weight: 450;
+  text-align: left;
+  text-transform: uppercase;
+  color: #212529;
+}
+
+.nav-link:hover {
+  background-color: #98bf11;
+  color: white;
+}
+
+.nav-link.active {
+  background-color: #98bf11;
+  color: white;
+}
+
 .social-link {
   font-size: 24px;
 }
