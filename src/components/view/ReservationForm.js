@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { createReservation } from '../../redux/ReservationsSlice';
 import { fetchLocations } from '../../redux/LocationsSlice';
-import { fetchServices } from '../../redux/ServicesSlice';
+import { fetchMovies } from '../../redux/ServicesSlice';
 
 const ReservationForm = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const locations = useSelector((state) => state.locations.locations);
-  const services = useSelector((state) => state.services.services);
+  const services = useSelector((state) => state.movies.movies);
   const userId = localStorage.getItem('userId');
   const fullName = localStorage.getItem('full_name');
 

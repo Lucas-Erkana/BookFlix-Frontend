@@ -3,14 +3,14 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ReservationCard from './ReservationCard';
 import { fetchReservations } from '../../redux/ReservationsSlice';
-import { fetchServices } from '../../redux/ServicesSlice';
+import { fetchMovies } from '../../redux/ServicesSlice';
 import { fetchLocations } from '../../redux/LocationsSlice';
 import { fetchUsers } from '../../redux/UsersSlice';
 
 const Reservations = () => {
   const dispatch = useDispatch();
   const reservations = useSelector((state) => state.reservations.reservations);
-  const services = useSelector((state) => state.services.services);
+  const services = useSelector((state) => state.movies.movies);
   const locations = useSelector((state) => state.locations.locations);
   const users = useSelector((state) => state.users.users);
 
@@ -18,7 +18,7 @@ const Reservations = () => {
 
   useEffect(() => {
     dispatch(fetchReservations());
-    dispatch(fetchServices());
+    dispatch(fetchMovies());
     dispatch(fetchLocations());
     dispatch(fetchUsers());
   }, [dispatch]);
