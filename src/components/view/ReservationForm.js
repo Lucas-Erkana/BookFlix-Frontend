@@ -21,7 +21,7 @@ const ReservationForm = () => {
 
   useEffect(() => {
     dispatch(fetchLocations());
-    dispatch(fetchServices());
+    dispatch(fetchMovies());
   }, [dispatch]);
 
   useEffect(() => {
