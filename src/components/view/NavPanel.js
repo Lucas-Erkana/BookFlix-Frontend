@@ -53,7 +53,7 @@ const NavPanel = () => {
                 <NavLink className="nav-link ms-3 p-2" to="/add-movie">Add Movie</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to="/delete-movies">Delete Movies</NavLink>
+                <NavLink className="nav-link ms-3 p-2" to="/delete-movie">Delete Movies</NavLink>
               </li>
             </>
             )}
@@ -107,7 +107,27 @@ const NavPanel = () => {
           <p className="text-center m-0">
             <small>
               &copy; 2023
-              <strong> BookFlix</strong>
+              {' '}
+              <strong>
+                <span>
+                  <a href="https://github.com/Lucash2022">L</a>
+                </span>
+&nbsp;
+                <span>
+                  <a href="https://github.com/torobucci">K</a>
+                </span>
+&nbsp;
+                <span>
+                  <a href="https://github.com/SabaAhmad404">A</a>
+                </span>
+&nbsp;
+                <span>
+                  <a href="https://github.com/SamTush">T</a>
+                </span>
+&nbsp;
+              </strong>
+              {' '}
+              Group
             </small>
           </p>
         </div>
