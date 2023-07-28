@@ -7,7 +7,6 @@ import { AiOutlineUserAdd } from 'react-icons/ai';
 import logo from '../../assets/images/bookflix-logo.png';
 
 const NavPanel = () => {
-
   const navigate = useNavigate();
   const isAuthenticated = () => {
     const token = localStorage.getItem('token');

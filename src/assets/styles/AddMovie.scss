@@ -13,10 +13,6 @@
   border-radius: 1rem;
 }
 
-.add-movie-form .form-control {
-  border-radius: 2rem;
-}
-
 .form-control {
   background: transparent;
 }
@@ -34,7 +30,12 @@
   color: #343a40;
 }
 
-.add-movie,.cancel-add {
+.add-movie-form .form-control {
+  border-radius: 2rem;
+}
+
+.add-movie,
+.cancel-add {
   padding: 0.375rem 3rem;
 }
 
