@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 import { createReservation } from '../../redux/ReservationsSlice';
 import { fetchLocations } from '../../redux/LocationsSlice';
-import { fetchMovies } from '../../redux/ServicesSlice';
+import { fetchMovies } from '../../redux/MoviesSlice';
 
 const ReservationForm = () => {
   const { id } = useParams();

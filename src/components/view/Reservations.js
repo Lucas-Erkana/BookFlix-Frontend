@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import ReservationCard from './ReservationCard';
 import { fetchReservations } from '../../redux/ReservationsSlice';
-import { fetchMovies } from '../../redux/ServicesSlice';
+import { fetchMovies } from '../../redux/MoviesSlice';
 import { fetchLocations } from '../../redux/LocationsSlice';
 import { fetchUsers } from '../../redux/UsersSlice';
 
