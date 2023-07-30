@@ -168,7 +168,10 @@
 
   .sign-form__input {
     width: 80%;
-    padding: 7px 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    padding-right: 30px; // Adjust the padding to make room for the adjusted icon
   }
 
   .intro__title {
@@ -195,14 +198,9 @@
   .sign-in {
     font-size: 15px;
   }
+
   .password-icon {
     right: 52px; // Adjust the position from the right
     font-size: 1.2rem; // Adjust the size if necessary
-  }
-
-  .sign-form__input {
-    padding-right: 30px; // Adjust the padding to make room for the adjusted icon
-    width: 80%;
-    padding: 7px 15px;
   }
 }
