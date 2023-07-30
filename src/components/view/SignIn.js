@@ -8,7 +8,7 @@ const SignIn = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error] = useState(true);
+  const [errorMessage, setErrorMessage] = useState(null); // Updated from error to errorMessage
   const [showPassword, setShowPassword] = useState(false);
 
   const handleLogin = (e) => {
@@ -29,9 +29,8 @@ const SignIn = () => {
         localStorage.setItem('full_name', full_name);
         navigate('/');
       })
-      .catch((error) => {
-        const { message } = error.response.data;
-        document.getElementById('show-error').innerHTML = message;
+      .catch(() => { // Updated catch block
+        setErrorMessage('Incorrect email or password');
       });
   };
 
@@ -92,10 +91,7 @@ const SignIn = () => {
                 Sign Up
               </Link>
             </p>
-            {error === true && <p id="show-error" />}
-            {error === false && (
-              <p>Please enter valid username and password</p>
-            )}
+            {errorMessage && <p id="show-error" className="error-message">{errorMessage}</p>}
           </div>
         </div>
       </div>

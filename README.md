@@ -142,11 +142,6 @@ $ npm test
 
 - GitHub: [@SamTush](https://github.com/SamTush)
 
-👤 **Faranosh Amini**
-
-- GitHub: [@githubhandle](https://github.com/FaranoshAmini)
-- Twitter: [@twitterhandle](https://twitter.com/Faranosh_Amini)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/faranosh-amini-9b925b23a/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
