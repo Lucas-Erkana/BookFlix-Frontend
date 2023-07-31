@@ -1,17 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaAngleLeft } from 'react-icons/fa';
 import { fetchMovies } from '../../redux/MoviesSlice';
-// import ReserveFromService from './ReserveFromService';
+import ReserveFromMovie from '../child-components/ReserveFromMovie';
 
 const Details = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const services = useSelector((state) => state.movies.movies);
-  const service = services.find((service) => service.id === Number(id));
+  const movies = useSelector((state) => state.movies.movies);
+  const movie = movies.find((movie) => movie.id === Number(id));
 
   const [showForm, setShowForm] = useState(false);
 
@@ -23,6 +22,9 @@ const Details = () => {
 
   const handleReserveClick = () => {
     setShowForm(true);
+  };
+  const handleCancelClick = () => {
+    setShowForm(false);
   };
   const handleReturn = () => {
     navigate('/');
@@ -36,7 +38,7 @@ const Details = () => {
             <div className="col-md-6 d-flex flex-column align-items-center">
               <div className="row">
                 <div className="col-12 text-center">
-                  <img src={service.image} alt={service.name} className="shadow-lg img-fluid mx-auto service-details-image" />
+                  <img src={movie.image} alt={movie.name} className="shadow-lg img-fluid mx-auto service-details-image" />
                 </div>
               </div>
 
@@ -50,28 +52,28 @@ const Details = () => {
             </div>
 
             <div className="col-md-6 d-flex flex-column align-items-center">
-              <h2>{service.name}</h2>
+              <h2>{movie.name}</h2>
               <table className="table table-striped ">
                 <tbody>
                   <tr>
                     <td>Description</td>
-                    <td>{service.details}</td>
+                    <td>{movie.details}</td>
                   </tr>
                   <tr>
                     <td>Trailer</td>
-                    <td><a href={service.trailer} target="_blank" rel="noopener noreferrer">Watch now</a></td>
+                    <td><a href={movie.trailer} target="_blank" rel="noopener noreferrer">Watch now</a></td>
                   </tr>
                   <tr>
-                    <td>Service charge</td>
+                    <td>Ticket charge</td>
                     <td>
                       $
-                      {service.price}
+                      {movie.price}
                     </td>
                   </tr>
                   <tr>
                     <td>Duration</td>
                     <td>
-                      {service.duration}
+                      {movie.duration}
                       {' '}
                       hours
                     </td>
@@ -91,12 +93,12 @@ const Details = () => {
                   </tr>
                 </tbody>
               </table>
-              <button type="button" onClick={handleReserveClick} className="details-btn">Reserve</button>
+              <button type="button" onClick={() => handleReserveClick()} className="details-btn">Reserve</button>
             </div>
           </div>
         </div>
       ) : (
-        <div />
+        <ReserveFromMovie handleCancelClick={handleCancelClick} />
       )}
     </>
   );

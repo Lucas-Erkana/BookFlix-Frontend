@@ -1,7 +1,7 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import NavPanel from './NavPanel';
-import MobileNav from './MobileNav';
+import NavPanel from '../child-components/NavPanel';
+import MobileNav from '../child-components/MobileNav';
 
 function LayOut() {
   return (

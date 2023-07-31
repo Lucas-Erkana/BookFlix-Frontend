@@ -22,6 +22,10 @@ $gray-font: #adadaf;
   font-family: sans-serif;
 }
 
+.app-container {
+  padding-left: 250px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -124,4 +128,10 @@ button {
 
 .container-main {
   min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .app-container {
+    padding-left: 0;
+  }
 }

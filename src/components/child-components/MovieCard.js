@@ -1,22 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const ServiceCard = ({
+const MovieCard = ({
   name, image, details, price, id,
 }) => {
   const rating = Math.round((Math.random() * (5 - 4) + 4) * 10) / 10;
 
   return (
     <div>
-      <Link
-        to={{
-          pathname: `/services/${id}`,
-        }}
-        className="singlecard"
-      >
-        <img src={image} alt={name} className="service-image" />
-        <h4 className="bold-font service-name">{name}</h4>
+      <div className="singlecard">
+        <NavLink to={{ pathname: `/services/${id}` }}>
+          <img src={image} alt={name} className="service-image" />
+        </NavLink>
+        <NavLink to={{ pathname: `/services/${id}` }}>
+          <h4 className="bold-font service-name">{name}</h4>
+        </NavLink>
         <hr className="dash" />
         <div className="service-rating-price">
           <span className="bold-font gray-font">
@@ -32,14 +31,14 @@ const ServiceCard = ({
           </span>
         </div>
         <p className="gray-font service-details">{details}</p>
-      </Link>
+      </div>
     </div>
   );
 };
 
-export default ServiceCard;
+export default MovieCard;
 
-ServiceCard.propTypes = {
+MovieCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
