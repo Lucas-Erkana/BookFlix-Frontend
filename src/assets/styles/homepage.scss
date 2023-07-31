@@ -47,6 +47,10 @@
   }
 }
 
+.swiper {
+  margin: 0;
+}
+
 .swiper-button-prev,
 .swiper-button-next {
   display: none;
@@ -103,6 +107,10 @@ i {
   margin-top: 16px;
   background-color: rgba(255, 255, 255, 0.75);
   padding: 0 4px;
+}
+
+.service-name:hover {
+  color: #98bf11;
 }
 
 .service-details {

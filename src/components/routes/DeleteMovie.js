@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchMovies } from '../../redux/MoviesSlice';
-import DeleteMovieCard from './DeleteMovieCard';
+import DeleteMovieCard from '../child-components/DeleteMovieCard';
 
 const DeleteMovie = () => {
   const dispatch = useDispatch();

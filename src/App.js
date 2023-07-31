@@ -1,20 +1,20 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import LayOut from './components/view/LayOut';
-import Home from './components/view/Home';
+import LayOut from './components/routes/LayOut';
+import Home from './components/routes/Home';
 import AddMovie from './components/routes/AddMovie';
-import SignIn from './components/view/SignIn';
-import SignUp from './components/view/SignUp';
-import Details from './components/view/Details';
-import Reservations from './components/view/Reservations';
-import ReservationForm from './components/view/ReservationForm';
-import DeleteMovie from './components/view/DeleteMovie';
+import SignIn from './components/routes/SignIn';
+import SignUp from './components/routes/SignUp';
+import Details from './components/routes/Details';
+import Reservations from './components/routes/Reservations';
+import ReservationForm from './components/routes/ReservationForm';
+import DeleteMovie from './components/routes/DeleteMovie';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './assets/styles/custom.scss';
 
 function App() {
   return (
-    <div className="container-fluid col-md-12 d-flex p-0">
+    <div className="app-container col-md-12 d-flex">
       <Routes>
         <Route path="/" element={<LayOut />}>
           <Route index element={<Home />} />
