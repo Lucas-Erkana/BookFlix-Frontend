@@ -15,11 +15,11 @@ const ReservationCard = ({
   return (
     <div className="reservation-card col-md-12">
       <div className="image-and-text d-flex justify-content-start align-items-center">
-        <img src={movieImage} alt={movieName} className="service-thumb" />
+        <img src={movieImage} alt={movieName} className="movie-thumb" />
         <p className="my-0 mx-1 reservation-card-details">
           <strong>{movieName}</strong>
           {' '}
-          service reserved by
+          movie reserved by
           {' '}
           <strong>{userName}</strong>
           {' '}

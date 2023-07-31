@@ -41,7 +41,7 @@ const Home = () => {
       <div className="carousel-container col-12">
 
         <Swiper
-          className="service-list col-10"
+          className="movie-list col-10"
           modules={[Navigation, A11y]}
           spaceBetween={0}
           slidesPerView={isMobile ? 1 : 3}

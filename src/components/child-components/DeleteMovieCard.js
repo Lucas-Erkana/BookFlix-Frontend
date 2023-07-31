@@ -15,7 +15,7 @@ const DeleteMovieCard = ({ id, name, image }) => {
   return (
     <div className="col-md-12 d-flex flex-column flex-md-row p-2 justify-content-between align-items-center delete-card rounded">
       <div className="d-flex flex-wrap align-items-center m-1">
-        <img src={image} alt="service" className="img-thumbnail rounded m-2 delete-img" />
+        <img src={image} alt="movie" className="img-thumbnail rounded m-2 delete-img" />
         <h4>{name}</h4>
       </div>
       <div className="px-2">
@@ -23,7 +23,7 @@ const DeleteMovieCard = ({ id, name, image }) => {
           <div className="confirmation-message d-flex flex-column align-items-end">
             <p>
               Are you sure?
-              This will permanently delete the service and it&apos;s reservations.
+              This will permanently delete the movie and it&apos;s reservations.
             </p>
             <div className="d-flex g-2 justify-content-end">
               <button className="btn btn-outline-danger" type="button" onClick={handleDeleteClick}>

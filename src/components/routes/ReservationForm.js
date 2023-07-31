@@ -29,7 +29,7 @@ const ReservationForm = () => {
     const reservationData = {
       start_date: startDate,
       end_date: endDate,
-      service_id: parseInt(movieId, 10),
+      movie_id: parseInt(movieId, 10),
       user_id: parseInt(userId, 10),
       location_id: parseInt(locationId, 10),
     };
@@ -70,9 +70,9 @@ const ReservationForm = () => {
             </label>
           </div>
           <div className="d-flex input-row align-items-center g-4">
-            <label htmlFor="serviceId">
+            <label htmlFor="movieId">
               <div className="select-wrapper">
-                <select className="p-2 px-0" onChange={(e) => setMovieId(e.target.value)} name="serviceId">
+                <select className="p-2 px-0" onChange={(e) => setMovieId(e.target.value)} name="movieId">
                   <option value="">Select a Movie</option>
                   {movies.map((movie) => (
                     <option

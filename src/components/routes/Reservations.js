@@ -56,11 +56,11 @@ const Reservations = () => {
           <ReservationCard
             startDate={reservation.start_date}
             endDate={reservation.end_date}
-            movieName={getMovieName(reservation.service_id)}
+            movieName={getMovieName(reservation.movie_id)}
             userName={getUserName(reservation.user_id)}
             locationName={getLocationName(reservation.location_id)}
             reservationId={reservation.id}
-            movieImage={getMovieImage(reservation.service_id)}
+            movieImage={getMovieImage(reservation.movie_id)}
             key={reservation.id}
           />
         ))}

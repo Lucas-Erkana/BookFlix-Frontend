@@ -25,13 +25,13 @@ export const { setReservations, addReservation } = reservationSlice.actions;
 export default reservationSlice.reducer;
 
 const fetchReservations = () => async (dispatch) => {
-  const response = await fetch('https://book-flix.onrender.com/api/v1/reservations');
+  const response = await fetch('https://book-flix-app.onrender.com/api/v1/reservations');
   const data = await response.json();
   dispatch(setReservations(data));
 };
 
 const createReservation = (reservationData) => async (dispatch) => {
-  const response = await fetch('https://book-flix.onrender.com/api/v1/reservations', {
+  const response = await fetch('https://book-flix-app.onrender.com/api/v1/reservations', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -43,7 +43,7 @@ const createReservation = (reservationData) => async (dispatch) => {
 };
 
 const deleteReservation = (reservationId) => async (dispatch) => {
-  await fetch(`https://book-flix.onrender.com/api/v1/reservations/${reservationId}`, {
+  await fetch(`https://book-flix-app.onrender.com/api/v1/reservations/${reservationId}`, {
     method: 'DELETE',
   });
 
