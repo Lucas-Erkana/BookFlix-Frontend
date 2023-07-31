@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, useNavigate } from 'react-router-dom';
 import { storage } from '../firebaseConfig';
 
-const AddService = () => {
+const AddMovie = () => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
@@ -50,7 +50,7 @@ const AddService = () => {
       },
       () => {
         uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
-          const newService = {
+          const newMovie = {
             name,
             price,
             image: downloadURL,
@@ -78,20 +78,20 @@ const AddService = () => {
 
   return (
     <BrowserRouter>
-      <div className="col-md col container-fluid d-flex justify-content-center align-items-center add-service-container">
-        <div className="d-flex flex-column m-5 p-5 align-items-center add-service-div">
+      <div className="col-md col container-fluid d-flex justify-content-center align-items-center add-movie-container">
+        <div className="d-flex flex-column m-5 p-5 align-items-center add-movie-div">
           <div className="d-sm-inline-flex align-items-center my-4">
-            <h1 className="mx-3">Service</h1>
+            <h1 className="mx-3">Movie</h1>
           </div>
 
-          <form className="row g-4 add-service-form">
+          <form className="row g-4 add-movie-form">
             <div className="col-md-12">
-              <input type="text" placeholder="Service Type" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+              <input type="text" placeholder="Movie Type" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
             </div>
 
             <div className="input-group col-md-12">
               <span className="input-group-text add-price-input">$</span>
-              <input type="float" placeholder="Service Charge" className="form-control" value={price} onChange={(e) => setPrice(e.target.value)} />
+              <input type="float" placeholder="Movie Charge" className="form-control" value={price} onChange={(e) => setPrice(e.target.value)} />
               <span className="input-group-text add-price-input">.00</span>
             </div>
             <div className="col-md-12">
@@ -104,7 +104,7 @@ const AddService = () => {
               <input type="number" placeholder="Duration" className="form-control" value={duration} onChange={(e) => setDuration(e.target.value)} />
             </div>
             <div className="col-md-12 d-flex justify-content-end g-3">
-              <button type="button" className="col-md-5 btn btn-success add-btn mx-3" onClick={handleAddClick}>Add Service</button>
+              <button type="button" className="col-md-5 btn btn-success add-btn mx-3" onClick={handleAddClick}>Add Movie</button>
               <button type="button" className="col-md-4 btn btn-outline-danger cancel-add-btn" onClick={handleCancelClick}>Cancel</button>
             </div>
 
@@ -136,4 +136,4 @@ const AddService = () => {
   );
 };
 
-export default AddService;
+export default AddMovie;

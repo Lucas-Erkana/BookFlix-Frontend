@@ -1,57 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DeleteMovieCard DeleteMovieCard renders correctly 1`] = `
+exports[`DeleteMovies DeleteMovies renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
-        class="col-md-12 d-flex flex-column flex-md-row p-2 justify-content-between align-items-center delete-card rounded"
+        class="container-fluid p-5"
       >
         <div
-          class="d-flex flex-wrap align-items-center m-1"
+          class="row g-3 p-3"
         >
-          <img
-            alt="movie"
-            class="img-thumbnail rounded m-2 delete-img"
-          />
-          <h4 />
-        </div>
-        <div
-          class="px-2"
-        >
-          <button
-            class="btn btn-danger delete-btn"
-            type="button"
-          >
-            Delete
-          </button>
+          <div>
+            1
+            1
+            Movie 1
+            https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Movie%20Card%20Images/Movie_1_1_xqjz3c.jpg
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, sapien vitae aliquam dapibus, magna quam ultricies nunc, nec tincidunt nisl nunc vitae elit. 
+          </div>
         </div>
       </div>
     </div>
   </body>,
   "container": <div>
     <div
-      class="col-md-12 d-flex flex-column flex-md-row p-2 justify-content-between align-items-center delete-card rounded"
+      class="container-fluid p-5"
     >
       <div
-        class="d-flex flex-wrap align-items-center m-1"
+        class="row g-3 p-3"
       >
-        <img
-          alt="movie"
-          class="img-thumbnail rounded m-2 delete-img"
-        />
-        <h4 />
-      </div>
-      <div
-        class="px-2"
-      >
-        <button
-          class="btn btn-danger delete-btn"
-          type="button"
-        >
-          Delete
-        </button>
+        <div>
+          1
+          1
+          Movie 1
+          https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Movie%20Card%20Images/Movie_1_1_xqjz3c.jpg
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, sapien vitae aliquam dapibus, magna quam ultricies nunc, nec tincidunt nisl nunc vitae elit. 
+        </div>
       </div>
     </div>
   </div>,

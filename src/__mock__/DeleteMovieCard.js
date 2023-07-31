@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 const DeleteMovieCard = () => {
-  const service = [{
+  const movie = [{
     name: 'Movie 1',
     image: 'https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Movie%20Card%20Images/Movie_1_1_xqjz3c.jpg',
     id: 1,
@@ -18,16 +18,16 @@ const DeleteMovieCard = () => {
     <BrowserRouter>
       <div className="col-md-12 d-flex flex-column flex-md-row p-2 justify-content-between align-items-center delete-card rounded">
         <div className="d-flex flex-wrap align-items-center m-1">
-          <img src={service.image} alt="service" className="img-thumbnail rounded m-2 delete-img" />
-          <h4>{service.name}</h4>
+          <img src={movie.image} alt="movie" className="img-thumbnail rounded m-2 delete-img" />
+          <h4>{movie.name}</h4>
         </div>
         <div className="px-2">
           {showConfirmation ? (
             <div className="confirmation-message d-flex flex-column align-items-end">
               <p>
-                Are you sure you want to delete the service
+                Are you sure you want to delete the movie
                 {' '}
-                {service.name}
+                {movie.name}
                 ? This action cannot be undone.
               </p>
               <div className="d-flex g-2 justify-content-end">

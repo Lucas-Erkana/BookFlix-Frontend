@@ -6,10 +6,10 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="col-md col container-fluid d-flex justify-content-center align-items-center add-service-container"
+        class="col-md col container-fluid d-flex justify-content-center align-items-center add-movie-container"
       >
         <div
-          class="d-flex flex-column m-5 p-5 align-items-center add-service-div"
+          class="d-flex flex-column m-5 p-5 align-items-center add-movie-div"
         >
           <div
             class="d-sm-inline-flex align-items-center my-4"
@@ -17,18 +17,18 @@ Object {
             <h1
               class="mx-3"
             >
-              Service
+              Movie
             </h1>
           </div>
           <form
-            class="row g-4 add-service-form"
+            class="row g-4 add-movie-form"
           >
             <div
               class="col-md-12"
             >
               <input
                 class="form-control"
-                placeholder="Service Type"
+                placeholder="Movie Type"
                 type="text"
                 value=""
               />
@@ -43,7 +43,7 @@ Object {
               </span>
               <input
                 class="form-control"
-                placeholder="Service Charge"
+                placeholder="Movie Charge"
                 type="float"
                 value=""
               />
@@ -89,7 +89,7 @@ Object {
                 class="col-md-5 btn btn-success add-btn mx-3"
                 type="button"
               >
-                Add Service
+                Add Movie
               </button>
               <button
                 class="col-md-4 btn btn-outline-danger cancel-add-btn"
@@ -105,10 +105,10 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="col-md col container-fluid d-flex justify-content-center align-items-center add-service-container"
+      class="col-md col container-fluid d-flex justify-content-center align-items-center add-movie-container"
     >
       <div
-        class="d-flex flex-column m-5 p-5 align-items-center add-service-div"
+        class="d-flex flex-column m-5 p-5 align-items-center add-movie-div"
       >
         <div
           class="d-sm-inline-flex align-items-center my-4"
@@ -116,18 +116,18 @@ Object {
           <h1
             class="mx-3"
           >
-            Service
+            Movie
           </h1>
         </div>
         <form
-          class="row g-4 add-service-form"
+          class="row g-4 add-movie-form"
         >
           <div
             class="col-md-12"
           >
             <input
               class="form-control"
-              placeholder="Service Type"
+              placeholder="Movie Type"
               type="text"
               value=""
             />
@@ -142,7 +142,7 @@ Object {
             </span>
             <input
               class="form-control"
-              placeholder="Service Charge"
+              placeholder="Movie Charge"
               type="float"
               value=""
             />
@@ -188,7 +188,7 @@ Object {
               class="col-md-5 btn btn-success add-btn mx-3"
               type="button"
             >
-              Add Service
+              Add Movie
             </button>
             <button
               class="col-md-4 btn btn-outline-danger cancel-add-btn"
