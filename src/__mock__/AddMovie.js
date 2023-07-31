@@ -7,6 +7,7 @@ const AddService = () => {
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
   const [details, setDetails] = useState('');
+  const [trailer, setTrailer] = useState('');
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isUploading, setIsUploading] = useState(false);
   const [uploadSuccess, setUploadSuccess] = useState(false);
@@ -53,6 +54,7 @@ const AddService = () => {
             name,
             price,
             image: downloadURL,
+            trailer,
             details,
             duration,
           };
@@ -61,6 +63,7 @@ const AddService = () => {
           setPrice('');
           setImage('');
           setDetails('');
+          setTrailer('');
           setDuration('');
           setIsUploading(false);
           setUploadSuccess(true);
