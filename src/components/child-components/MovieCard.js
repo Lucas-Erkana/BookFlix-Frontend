@@ -10,27 +10,27 @@ const MovieCard = ({
   return (
     <div>
       <div className="singlecard">
-        <NavLink to={{ pathname: `/services/${id}` }}>
-          <img src={image} alt={name} className="service-image" />
+        <NavLink to={{ pathname: `/movies/${id}` }}>
+          <img src={image} alt={name} className="movie-image" />
         </NavLink>
-        <NavLink to={{ pathname: `/services/${id}` }}>
-          <h4 className="bold-font service-name">{name}</h4>
+        <NavLink to={{ pathname: `/movies/${id}` }}>
+          <h4 className="bold-font movie-name">{name}</h4>
         </NavLink>
         <hr className="dash" />
-        <div className="service-rating-price">
+        <div className="movie-rating-price">
           <span className="bold-font gray-font">
             <i className="fa-sharp fa-solid fa-star-half-stroke" />
             {' '}
             {rating}
           </span>
-          <span className="service-circle-splitter" />
+          <span className="movie-circle-splitter" />
           <span className="bold-font gray-font">
             <i className="fa-solid fa-dollar-sign" />
             {' '}
             {price}
           </span>
         </div>
-        <p className="gray-font service-details">{details}</p>
+        <p className="gray-font movie-details">{details}</p>
       </div>
     </div>
   );

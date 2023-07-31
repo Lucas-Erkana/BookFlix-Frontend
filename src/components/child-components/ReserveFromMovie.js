@@ -30,7 +30,7 @@ const ReserveFromMovie = ({ handleCancelClick }) => {
     const reservationData = {
       start_date: startDate,
       end_date: endDate,
-      service_id: parseInt(id, 10),
+      movie_id: parseInt(id, 10),
       user_id: parseInt(userId, 10),
       location_id: parseInt(locationId, 10),
     };
@@ -60,7 +60,7 @@ const ReserveFromMovie = ({ handleCancelClick }) => {
           {' '}
 
         </h1>
-        <p className="text-light text-center service-name-in-form heading text-uppercase">
+        <p className="text-light text-center movie-name-in-form heading text-uppercase">
           {movie && movie.name}
         </p>
         <hr className="w-50 border-top-2 border-light" />

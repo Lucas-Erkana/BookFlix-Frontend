@@ -19,7 +19,7 @@ export const { setLocations } = locationSlice.actions;
 export default locationSlice.reducer;
 
 const fetchLocations = () => async (dispatch) => {
-  const response = await fetch('https://book-flix.onrender.com/api/v1/locations');
+  const response = await fetch('https://book-flix-app.onrender.com/api/v1/locations');
   const data = await response.json();
   dispatch(setLocations(data));
 };

@@ -20,7 +20,7 @@
     gap: 8px;
     align-items: center;
 
-    .service-thumb {
+    .movie-thumb {
       height: 100px;
       width: 100px;
       object-fit: cover;
@@ -113,11 +113,11 @@ select {
   filter: invert(1);
 }
 
-.service-image-in-form {
+.movie-image-in-form {
   width: 300px;
 }
 
-.service-name-in-form {
+.movie-name-in-form {
   font-weight: bold;
   background-color: $primary;
   border-radius: 4px;
@@ -140,7 +140,7 @@ select {
       gap: 8px;
     }
 
-    .service-thumb {
+    .movie-thumb {
       height: 50px !important;
       width: 50px !important;
       object-fit: cover;
