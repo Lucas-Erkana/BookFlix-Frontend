@@ -10,7 +10,7 @@ const SignIn = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3000/login', {
+      .post('https://book-flix-app.onrender.com/login', {
         user: {
           email,
           password,
@@ -18,6 +18,7 @@ const SignIn = () => {
       })
       .then((response) => {
         localStorage.setItem('token', response.headers.authorization);
+        // eslint-disable-next-line camelcase
         const { role, id, full_name } = response.data.data;
         localStorage.setItem('role', role);
         localStorage.setItem('userId', id);

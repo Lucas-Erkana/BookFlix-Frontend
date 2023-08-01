@@ -1,0 +1,93 @@
+.main-nav,
+.btn-sidebar-toggle {
+  display: none;
+}
+
+.signin,
+.signup {
+  .home-icon {
+    font-size: 48px;
+  }
+}
+
+.mobile-nav {
+  display: block;
+}
+
+.offcanvas-title {
+  .site-logo {
+    height: auto;
+    width: 66%;
+  }
+}
+
+.mobile-nav-container {
+  --bs-gutter-x: 0;
+}
+
+.site-logo-mobile {
+  height: 28px;
+  top: 21px;
+  transform: translateX(50%);
+  width: auto;
+  right: 48%;
+  display: block;
+}
+
+.social-link {
+  color: #1c1c1c;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    color: #1c1c1c;
+    transform: rotate(45deg);
+  }
+}
+
+.logging {
+  list-style-type: none;
+
+  li {
+    width: max-content;
+
+    a,
+    button {
+      font-size: small;
+      width: max-content;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .mobile-nav {
+    display: none;
+  }
+
+  .main-nav,
+  .btn-sidebar-toggle {
+    display: block;
+  }
+
+  .site-logo-mobile {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 8px 24px;
+    color: inherit;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    &:hover {
+      color: white;
+      background-color: rgba(12, 12, 12, 0.88);
+    }
+
+    &.active {
+      color: white;
+      background-color: #98bf11 !important;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { addMovie } from '../../redux/MoviesSlice';
-import { storage } from '../../firebaseConfig';
+import { addMovie } from '../store/MoviesSlice';
+import { storage } from '../firebaseConfig';
 
 const AddMovie = () => {
   const [name, setName] = useState('');
@@ -87,32 +87,32 @@ const AddMovie = () => {
 
         <form className="row g-4 add-movie-form">
           <div className="col-md-12">
-            <input type="text" placeholder="Movie title" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
+            <input type="text" placeholder="Movie Type" className="form-control" value={name} onChange={(e) => setName(e.target.value)} />
           </div>
 
           <div className="input-group col-md-12">
-            <span className="input-group-text add-price-input-l">$</span>
-            <input type="float" placeholder="Ticket price" className="form-control ticket-price" value={price} onChange={(e) => setPrice(e.target.value)} />
-            <span className="input-group-text add-price-input-r">.00</span>
+            <span className="input-group-text add-price-input">$</span>
+            <input type="float" placeholder="Movie Charge" className="form-control" value={price} onChange={(e) => setPrice(e.target.value)} />
+            <span className="input-group-text add-price-input">.00</span>
           </div>
           <div className="col-md-12">
-            <input type="textarea" placeholder="Movie Details" className="form-control" value={details} onChange={(e) => setDetails(e.target.value)} />
-          </div>
-          <div className="col-md-12 d-flex flex-md-row flex-column justify-content-between gap-4">
-            <input type="file" className="form-control" id="inputGroupFile02" onChange={handleFileChange} />
-            <input type="number" placeholder="Duration" className="form-control" value={duration} onChange={(e) => setDuration(e.target.value)} />
+            <input type="textarea" placeholder="Details" className="form-control" value={details} onChange={(e) => setDetails(e.target.value)} />
           </div>
           <div className="col-md-12">
             <input type="textarea" placeholder="trailer" className="form-control" value={trailer} onChange={(e) => setTrailer(e.target.value)} />
           </div>
-          <div className="col-md-12 d-flex justify-content-center">
-            <button type="button" className="col-md-3 btn rounded-pill mx-3 add-movie" onClick={handleAddClick}>Add Movie</button>
-            <button type="button" className="col-md-3 btn rounded-pill cancel-add" onClick={handleCancelClick}>Cancel</button>
+          <div className="col-md-12 d-flex flex-md-row flex-column justify-content-between g-4">
+            <input type="file" className="form-control" id="inputGroupFile02" onChange={handleFileChange} />
+            <input type="number" placeholder="Duration" className="form-control" value={duration} onChange={(e) => setDuration(e.target.value)} />
+          </div>
+          <div className="col-md-12 d-flex justify-content-end g-3">
+            <button type="button" className="col-md-5 btn btn-light text-success rounded-pill mx-3" onClick={handleAddClick}>Add Movie</button>
+            <button type="button" className="col-md-4 btn btn-danger rounded-pill" onClick={handleCancelClick}>Cancel</button>
           </div>
 
           {isUploading && (
           <div>
-            <p className="text-light text-center text-warning">
+            <p className="text-light">
               Uploading:
               {uploadProgress}
               %
@@ -121,13 +121,13 @@ const AddMovie = () => {
           )}
 
           {uploadSuccess && (
-          <div className="text-center text-success">
+          <div>
             <p>File uploaded successfully!</p>
           </div>
           )}
 
           {errorMessage && (
-          <div className="text-center text-warning">
+          <div>
             <p>{errorMessage}</p>
           </div>
           )}

@@ -1,21 +1,20 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import {
   FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaSignInAlt, FaSignOutAlt,
 } from 'react-icons/fa';
 import { AiOutlineUserAdd } from 'react-icons/ai';
-import logo from '../../assets/images/bookflix-logo.png';
+import logo from '../assets/images/bookflix-logo.png';
+import isAuthenticated from './auth';
+import Admin from './IsAdmin';
 
-const NavPanel = () => {
+const Navbar = ({ sidebarOpen }) => {
+  const links = [
+    { id: 1, name: 'Movies', path: '/' },
+  ];
+
   const navigate = useNavigate();
-  const isAuthenticated = () => {
-    const token = localStorage.getItem('token');
-    return !!token;
-  };
-  const Admin = () => {
-    const role = localStorage.getItem('role');
-    return role === 'admin';
-  };
   const isLoggedIn = isAuthenticated();
   const isAdmin = Admin();
 
@@ -25,24 +24,26 @@ const NavPanel = () => {
   };
 
   return (
-    <aside className="main-nav">
+    <aside className={`main-nav ${sidebarOpen ? '' : 'collapse'}`}>
       <div className="d-flex flex-column flex-shrink-0 bg-light sidebar justify-content-between">
-        <div className="d-flex flex-column gap-5 pt-4">
-          <a href="/" className="d-flex justify-content-center mb-3">
-            <img src={logo} className="site-logo" alt="logo" />
+        <div className="logo-and-menu d-flex flex-column pt-5">
+          <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img src={logo} className="site-logo mb-5" alt="logo" />
           </a>
 
-          <ul className="nav flex-column mt-3">
-            <li className="nav-item">
-              <NavLink className="nav-link ms-3 ps-3" to="/">Movies</NavLink>
-            </li>
+          <ul className="nav flex-column">
+            {links.map((link) => (
+              <li key={link.id} className="nav-item">
+                <NavLink className="nav-link" to={link.path}>{link.name}</NavLink>
+              </li>
+            ))}
             {isLoggedIn && (
             <>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 ps-3" to="/reserve">Reserve</NavLink>
+                <NavLink className="nav-link" to="/reserve">Reserve</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 ps-3" to="/reservations">Reservations</NavLink>
+                <NavLink className="nav-link" to="/reservations">My Reservations</NavLink>
               </li>
 
             </>
@@ -50,10 +51,10 @@ const NavPanel = () => {
             {isLoggedIn && isAdmin && (
             <>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 ps-3" to="/add-movie">Add Movie</NavLink>
+                <NavLink className="nav-link" to="/add-movie">Add Movies</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 ps-3" to="/delete-movie">Delete Movies</NavLink>
+                <NavLink className="nav-link" to="/delete-movies">Delete Movie</NavLink>
               </li>
             </>
             )}
@@ -61,36 +62,36 @@ const NavPanel = () => {
           </ul>
         </div>
         {/* Social Sharing Links */}
-        <div className="social-sharing p-3 d-flex flex-column gap-2">
-          <ul className="d-flex justify-content-center gap-4 p-0">
+        <div className="social-sharing p-3 d-flex flex-column mb-2 g-3">
+          <ul className="d-flex justify-content-center g-4 logging p-0">
             {isLoggedIn ? (
               <li>
                 <button type="button" className="logout btn btn-outline-danger btn-small" onClick={handleLogout}>
                   <FaSignOutAlt />
-                  &nbsp;
+&nbsp;
                   Logout
                 </button>
               </li>
             ) : (
               <>
                 <li>
-                  <NavLink to="/signin" className="login-btn btn btn-small">
+                  <NavLink to="/signin" className="btn btn-small btn-dark">
                     <FaSignInAlt />
-                    &nbsp;
-                    Login
+&nbsp;
+                    Sign In
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink to="/signup" className="signup btn btn-small">
+                  <NavLink to="/signup" className="btn btn-small btn-dark">
                     <AiOutlineUserAdd />
-                    &nbsp;
+&nbsp;
                     Sign Up
                   </NavLink>
                 </li>
               </>
             )}
           </ul>
-          <div className="d-flex justify-content-center gap-3">
+          <div className="d-flex justify-content-center g-4">
             <Link to="/" className="social-link">
               <FaFacebook />
             </Link>
@@ -104,25 +105,25 @@ const NavPanel = () => {
               <FaGithub />
             </Link>
           </div>
-          <p className="text-center m-0">
+          <p className="text-center">
             <small>
-              &copy; 2023
+              &copy; 2023 by
               {' '}
               <strong>
                 <span>
-                  <a href="https://github.com/Lucash2022" className="intialsL">L</a>
+                  <a href="https://github.com/Lucash2022">L</a>
                 </span>
 &nbsp;
                 <span>
-                  <a href="https://github.com/torobucci" className="intialsK">K</a>
+                  <a href="https://github.com/torobucci">K</a>
                 </span>
 &nbsp;
                 <span>
-                  <a href="https://github.com/SabaAhmad404" className="intialsA">S</a>
+                  <a href="https://github.com/SabaAhmad404">A</a>
                 </span>
 &nbsp;
                 <span>
-                  <a href="https://github.com/SamTush" className="intialsT">S</a>
+                  <a href="https://github.com/SamTush">T</a>
                 </span>
 &nbsp;
               </strong>
@@ -136,4 +137,8 @@ const NavPanel = () => {
   );
 };
 
-export default NavPanel;
+Navbar.propTypes = {
+  sidebarOpen: PropTypes.bool.isRequired,
+};
+
+export default Navbar;

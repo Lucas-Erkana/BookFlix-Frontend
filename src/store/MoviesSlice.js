@@ -18,6 +18,8 @@ const moviesSlice = createSlice(
 
 export const { setMovies } = moviesSlice.actions;
 
+export default moviesSlice.reducer;
+
 const fetchMovies = () => async (dispatch) => {
   const response = await fetch('https://book-flix-app.onrender.com/api/v1/movies');
   const data = await response.json();
@@ -43,4 +45,3 @@ const deleteMovie = (id) => async (dispatch) => {
 };
 
 export { fetchMovies, addMovie, deleteMovie };
-export default moviesSlice.reducer;

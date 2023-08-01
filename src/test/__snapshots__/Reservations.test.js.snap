@@ -1,98 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MovieCard MovieCard renders correctly 1`] = `
+exports[`Reservations Reservations renders correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-      <div>
-        <a
-          class="singlecard"
-          href="/movies/undefined"
+      <div
+        class="col-md col container-main d-flex flex-column reservations align-items-center p-3"
+      >
+        <div
+          class="reservation-list container"
         >
-          <img
-            alt=""
-          />
-          <h4
-            class="bold-font movie-name"
-          />
-          <hr
-            class="dash"
-          />
-          <div
-            class="movie-rating-price"
+          <a
+            class="btn btn-success my-4 align-self-end"
+            href="/reserve"
           >
-            <span
-              class="bold-font gray-font"
-            >
-              <i
-                class="fa-sharp fa-solid fa-star-half-stroke"
-              />
-               
-              5
-            </span>
-            <span
-              class="movie-circle-splitter"
-            />
-            <span
-              class="bold-font gray-font"
-            >
-              <i
-                class="fa-solid fa-dollar-sign"
-              />
-               
-            </span>
-          </div>
-          <p
-            class="gray-font movie-details"
-          />
-        </a>
+            Add Reservation
+          </a>
+        </div>
       </div>
     </div>
   </body>,
   "container": <div>
-    <div>
-      <a
-        class="singlecard"
-        href="/movies/undefined"
+    <div
+      class="col-md col container-main d-flex flex-column reservations align-items-center p-3"
+    >
+      <div
+        class="reservation-list container"
       >
-        <img
-          alt=""
-        />
-        <h4
-          class="bold-font movie-name"
-        />
-        <hr
-          class="dash"
-        />
-        <div
-          class="movie-rating-price"
+        <a
+          class="btn btn-success my-4 align-self-end"
+          href="/reserve"
         >
-          <span
-            class="bold-font gray-font"
-          >
-            <i
-              class="fa-sharp fa-solid fa-star-half-stroke"
-            />
-             
-            5
-          </span>
-          <span
-            class="movie-circle-splitter"
-          />
-          <span
-            class="bold-font gray-font"
-          >
-            <i
-              class="fa-solid fa-dollar-sign"
-            />
-             
-          </span>
-        </div>
-        <p
-          class="gray-font movie-details"
-        />
-      </a>
+          Add Reservation
+        </a>
+      </div>
     </div>
   </div>,
   "debug": [Function],

@@ -3,8 +3,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 const Home = () => {
   const cards = [{
-    name: 'Service 1',
-    image: 'https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Service%20Card%20Images/Service_1_1_xqjz3c.jpg',
+    name: 'Movie 1',
+    image: 'https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Movie%20Card%20Images/Movie_1_1_xqjz3c.jpg',
     details: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, sapien vitae aliquam dapibus, magna quam ultricies nunc, nec tincidunt nisl nunc vitae elit. ',
     price: 100,
     id: 1,
@@ -16,7 +16,7 @@ const Home = () => {
     <BrowserRouter>
       <div className="home col-md col">
         <h1 className="bold-font homepage-heading">
-          MOVIES TO WATCH
+          OUR SERVICES
         </h1>
         <p className="gray-font">
           Please select a Movie to reserve

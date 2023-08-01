@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -13,12 +13,13 @@ import {
   FaSignOutAlt,
 } from 'react-icons/fa';
 import { AiOutlineUserAdd } from 'react-icons/ai';
-import logo from '../../assets/images/bookflix-logo.png';
+import isAuthenticated from './auth';
+import logo from '../assets/images/bookflix-logo.png';
 
 const MobileNav = () => {
   const navigate = useNavigate();
-  const isLoggedIn = true;
-  const isAdmin = true;
+  const isLoggedIn = isAuthenticated();
+  const isAdmin = localStorage.getItem('role') === 'admin';
 
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
@@ -96,18 +97,25 @@ const MobileNav = () => {
                       <Nav.Link
                         className="nav-link"
                         onClick={handleOffcanvasClose}
-                        href="/delete-movie"
+                        href="/delete-movies"
                       >
-                        Delete Movies
+                        Delete Movie
                       </Nav.Link>
                     </>
                   )}
                 </Nav>
-                <div className="social-sharing p-3 d-flex flex-column gap-2">
-                  <ul className="d-flex justify-content-center gap-4 p-0">
+                <div className="social-sharing p-3 d-flex flex-column mb-2 g-3">
+                  <ul className="d-flex justify-content-center g-4 logging p-0">
                     {isLoggedIn ? (
                       <li>
-                        <button type="button" className="logout btn btn-outline-danger btn-small" onClick={handleLogout}>
+                        <button
+                          type="button"
+                          className="logout btn btn-outline-danger btn-small"
+                          onClick={() => {
+                            handleOffcanvasClose();
+                            handleLogout();
+                          }}
+                        >
                           <FaSignOutAlt />
                           &nbsp;
                           Logout
@@ -116,23 +124,31 @@ const MobileNav = () => {
                     ) : (
                       <>
                         <li>
-                          <NavLink to="/signin" className="login btn btn-small">
+                          <Link
+                            to="/signin"
+                            className="btn btn-small btn-dark"
+                            onClick={handleOffcanvasClose}
+                          >
                             <FaSignInAlt />
                             &nbsp;
-                            Log In
-                          </NavLink>
+                            Sign In
+                          </Link>
                         </li>
                         <li className="nav-item">
-                          <NavLink to="/signup" className="signup btn btn-small">
+                          <Link
+                            to="/signup"
+                            className="btn btn-small btn-dark"
+                            onClick={handleOffcanvasClose}
+                          >
                             <AiOutlineUserAdd />
                             &nbsp;
                             Sign Up
-                          </NavLink>
+                          </Link>
                         </li>
                       </>
                     )}
                   </ul>
-                  <div className="d-flex justify-content-center gap-3">
+                  <div className="d-flex justify-content-center g-4">
                     <Link to="/" className="social-link">
                       <FaFacebook />
                     </Link>
@@ -142,14 +158,37 @@ const MobileNav = () => {
                     <Link to="/" className="social-link">
                       <FaLinkedin />
                     </Link>
-                    <Link to="https://github.com/Lucash2022/BookFlix-Frontend" className="social-link">
+                    <Link
+                      to="https://github.com/Lucash2022/BookFlix-Frontend"
+                      className="social-link"
+                    >
                       <FaGithub />
                     </Link>
                   </div>
-                  <p className="text-center m-0">
+                  <p className="text-center">
                     <small>
-                      &copy; 2023
-                      <strong> BookFlix</strong>
+                      &copy; 2023 by
+                      {' '}
+                      <strong>
+                        <span>
+                          <a href="https://github.com/Lucash2022">L</a>
+                        </span>
+                        &nbsp;
+                        <span>
+                          <a href="https://github.com/torobucci">K</a>
+                        </span>
+                        &nbsp;
+                        <span>
+                          <a href="https://github.com/SabaAhmad404">A</a>
+                        </span>
+                        &nbsp;
+                        <span>
+                          <a href="https://github.com/SamTush">T</a>
+                        </span>
+                        &nbsp;
+                      </strong>
+                      {' '}
+                      Group
                     </small>
                   </p>
                 </div>

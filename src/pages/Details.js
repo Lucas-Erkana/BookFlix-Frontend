@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { useParams, useNavigate } from 'react-router-dom';
 import { FaAngleLeft } from 'react-icons/fa';
-import { fetchMovies } from '../../redux/MoviesSlice';
-import ReserveFromMovie from '../child-components/ReserveFromMovie';
+import { fetchMovies } from '../store/MoviesSlice';
+import ReserveFromMovie from '../components/ReserveFromMovie';
 
 const Details = () => {
   const { id } = useParams();
@@ -22,9 +23,6 @@ const Details = () => {
 
   const handleReserveClick = () => {
     setShowForm(true);
-  };
-  const handleCancelClick = () => {
-    setShowForm(false);
   };
   const handleReturn = () => {
     navigate('/');
@@ -64,7 +62,7 @@ const Details = () => {
                     <td><a href={movie.trailer} target="_blank" rel="noopener noreferrer">Watch now</a></td>
                   </tr>
                   <tr>
-                    <td>Ticket charge</td>
+                    <td>Movie charge</td>
                     <td>
                       $
                       {movie.price}
@@ -93,12 +91,12 @@ const Details = () => {
                   </tr>
                 </tbody>
               </table>
-              <button type="button" onClick={() => handleReserveClick()} className="details-btn">Reserve</button>
+              <button type="button" onClick={handleReserveClick} className="details-btn">Reserve</button>
             </div>
           </div>
         </div>
       ) : (
-        <ReserveFromMovie handleCancelClick={handleCancelClick} />
+        <ReserveFromMovie movieId={id} />
       )}
     </>
   );

@@ -6,8 +6,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import MovieCard from '../child-components/MovieCard';
-import { fetchMovies } from '../../redux/MoviesSlice';
+import MovieCard from '../components/MovieCard';
+import { fetchMovies } from '../store/MoviesSlice';
 
 const Home = () => {
   const dispatch = useDispatch();

@@ -9,7 +9,6 @@
 }
 
 .reservation-list {
-  border-color: black;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -23,8 +22,7 @@
   align-items: center;
   border-radius: 4px;
   padding: 16px;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
   .image-and-text {
     display: flex;
@@ -47,19 +45,22 @@
 
 .fa-angle-down {
   color: white;
-  margin-left: -1rem;
+  margin-left: -15px;
 }
 
 .reservation-form-body {
-  background-image: url("../images/reservation.png");
+  background:
+    linear-gradient(0deg, rgba(146, 185, 10, 0.88), rgba(146, 185, 12, 0.88)),
+    url("../images/reservation.png");
+  background-repeat: no-repeat;
   background-size: cover;
+  height: 100vh;
   background-position: center;
 }
 
 .reservation-form-overlay {
-  background-color: rgba(146, 185, 10, 0.88);
+  background-color: rgba(12, 12, 12, 0.88); //color for background
   height: 100%;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
 
   .heading {
     letter-spacing: 8px;
@@ -94,21 +95,19 @@ input:disabled {
     width: 55vw;
   }
 
+  button[type="submit"],
   input,
   .select-wrapper {
     border-radius: 50px;
+  }
+
+  input,
+  .select-wrapper {
     background-color: rgba(0, 0, 0, 0.175);
-    border: 2px solid rgb(242, 232, 232);
+    border: 2px solid white;
     color: white;
     padding: 0 7%;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-    &:focus {
-      border-color: $primary;
-      box-shadow: 0 0 10px rgba(146, 185, 10, 0.8), 0 0 10px rgba(146, 185, 10, 0.8); // Stronger box shadow on focus for glow effect
-    }
   }
 }
 
@@ -139,21 +138,16 @@ select {
   border-radius: 4px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   padding: 8px;
-  color: white; // Set text color to white
-  text-shadow: 0 0 5px rgba(146, 185, 10, 0.8); // Add a text glow effect
-  text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
   .reservation-card {
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 4px;
     padding: 16px;
-    background-color: rgba(255, 255, 255, 0.9);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
 
     .image-and-text {
       flex-direction: row;
@@ -174,7 +168,7 @@ select {
 
     .card-column {
       display: none;
-      display: flex;
+      //   display: flex;
       flex-direction: column;
       align-items: center;
       width: 16%;

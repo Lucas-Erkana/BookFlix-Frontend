@@ -7,7 +7,6 @@ const AddMovie = () => {
   const [price, setPrice] = useState('');
   const [image, setImage] = useState('');
   const [details, setDetails] = useState('');
-  const [trailer, setTrailer] = useState('');
   const [uploadProgress, setUploadProgress] = useState(0);
   const [isUploading, setIsUploading] = useState(false);
   const [uploadSuccess, setUploadSuccess] = useState(false);
@@ -54,7 +53,6 @@ const AddMovie = () => {
             name,
             price,
             image: downloadURL,
-            trailer,
             details,
             duration,
           };
@@ -63,7 +61,6 @@ const AddMovie = () => {
           setPrice('');
           setImage('');
           setDetails('');
-          setTrailer('');
           setDuration('');
           setIsUploading(false);
           setUploadSuccess(true);

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteMovie } from '../../redux/MoviesSlice';
+import { deleteMovie } from '../store/MoviesSlice';
 
 const DeleteMovieCard = ({ id, name, image }) => {
   const dispatch = useDispatch();
