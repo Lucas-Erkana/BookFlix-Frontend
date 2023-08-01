@@ -50,13 +50,16 @@
 }
 
 .reservation-form-body {
-  background-image: url("https://source.unsplash.com/random/?lightgreen,abstract");
+  background:
+    linear-gradient(0deg, rgb(146 185 10 / 100%), rgb(146 185 12 / 100%)),
+    url("https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80");
+  background-image: url("../images/reservation.png");
   background-size: cover;
   background-position: center;
 }
 
 .reservation-form-overlay {
-  background-color: rgba(12, 12, 12, 0.88); //color for background
+  background-color: rgba(146, 185, 10, 0.88);
   height: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
 
