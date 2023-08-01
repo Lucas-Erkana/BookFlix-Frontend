@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchMovies } from '../../redux/MoviesSlice';
-import DeleteMovieCard from '../child-components/DeleteMovieCard';
+import { fetchMovies } from '../store/MoviesSlice';
+import DeleteMoviesCard from '../components/DeleteMovieCard';
 
-const DeleteMovie = () => {
+const DeleteMovies = () => {
   const dispatch = useDispatch();
   const movies = useSelector((state) => state.movies.movies);
 
@@ -15,12 +15,13 @@ const DeleteMovie = () => {
       {movies.map((movie) => (
         <div className="row g-3 p-3" key={movie.id}>
 
-          <DeleteMovieCard
+          <DeleteMoviesCard
             key={movie.id}
             id={movie.id}
             name={movie.name}
             image={movie.image}
             details={movie.details}
+            trailer={movie.trailer}
           />
 
         </div>
@@ -29,4 +30,4 @@ const DeleteMovie = () => {
   );
 };
 
-export default DeleteMovie;
+export default DeleteMovies;

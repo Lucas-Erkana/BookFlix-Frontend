@@ -7,7 +7,7 @@ afterEach(() => {
 
 describe('DeleteMovieCard', () => {
   it('DeleteMovieCard renders correctly', () => {
-    const deleteservicecard = render(<DeleteMovieCard />);
-    expect(deleteservicecard).toMatchSnapshot();
+    const deletemoviecard = render(<DeleteMovieCard />);
+    expect(deletemoviecard).toMatchSnapshot();
   });
 });

@@ -18,6 +18,7 @@ const SignIn = () => {
       })
       .then((response) => {
         localStorage.setItem('token', response.headers.authorization);
+        // eslint-disable-next-line camelcase
         const { role, id, full_name } = response.data.data;
         localStorage.setItem('role', role);
         localStorage.setItem('userId', id);

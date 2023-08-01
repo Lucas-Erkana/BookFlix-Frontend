@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { deleteReservation } from '../../redux/ReservationsSlice';
+import { deleteReservation } from '../store/ReservationsSlice';
 
 const ReservationCard = ({
   startDate, endDate, userName, movieName, locationName, reservationId, movieImage,
@@ -37,7 +37,7 @@ const ReservationCard = ({
         </p>
       </div>
 
-      <button type="button" className="btn btn-danger cancel-reserve" onClick={handleCancel}>
+      <button type="button" className="btn btn-danger" onClick={handleCancel}>
         Cancel
       </button>
     </div>

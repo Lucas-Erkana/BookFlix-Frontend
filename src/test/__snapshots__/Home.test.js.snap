@@ -11,7 +11,7 @@ Object {
         <h1
           class="bold-font homepage-heading"
         >
-          MOVIES TO WATCH
+          OUR SERVICES
         </h1>
         <p
           class="gray-font"
@@ -27,8 +27,8 @@ Object {
           <div>
             <div>
               <div>
-                Service 1
-                https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Service%20Card%20Images/Service_1_1_xqjz3c.jpg
+                Movie 1
+                https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Movie%20Card%20Images/Movie_1_1_xqjz3c.jpg
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, sapien vitae aliquam dapibus, magna quam ultricies nunc, nec tincidunt nisl nunc vitae elit. 
                 100
                 1
@@ -46,7 +46,7 @@ Object {
       <h1
         class="bold-font homepage-heading"
       >
-        MOVIES TO WATCH
+        OUR SERVICES
       </h1>
       <p
         class="gray-font"
@@ -62,8 +62,8 @@ Object {
         <div>
           <div>
             <div>
-              Service 1
-              https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Service%20Card%20Images/Service_1_1_xqjz3c.jpg
+              Movie 1
+              https://res.cloudinary.com/dx0nauane/image/upload/v1624349663/Movie%20Card%20Images/Movie_1_1_xqjz3c.jpg
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla euismod, sapien vitae aliquam dapibus, magna quam ultricies nunc, nec tincidunt nisl nunc vitae elit. 
               100
               1

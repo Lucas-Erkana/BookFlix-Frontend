@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useState } from 'react';
 import axios from 'axios';
 
@@ -19,7 +20,7 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/signup', {
+      const response = await axios.post('https://book-flix-app.onrender.com/signup', {
         user: {
           full_name: formData.fullName,
           email: formData.email,
@@ -44,11 +45,7 @@ const SignUp = () => {
         <div className="input-box col-md d-flex flex-column align-items-center justify-content-center">
           <div className="intro">
             <span className="line" />
-            <h4 className="intro__title">
-              Welcome to
-              <span className="book">Book</span>
-              Flix
-            </h4>
+            <h4 className="intro__title">Welcome to <span className="book">Book</span>Flix</h4>
             <p className="intro__text">Available For Home Viewing</p>
             <p className="intro__text">Signup to get started!</p>
           </div>

@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import ReservationCard from '../child-components/ReservationCard';
-import { fetchReservations } from '../../redux/ReservationsSlice';
-import { fetchMovies } from '../../redux/MoviesSlice';
-import { fetchLocations } from '../../redux/LocationsSlice';
-import { fetchUsers } from '../../redux/UsersSlice';
+import ReservationCard from '../components/ReservationCard';
+import { fetchReservations } from '../store/ReservationsSlice';
+import { fetchMovies } from '../store/MoviesSlice';
+import { fetchLocations } from '../store/LocationsSlice';
+import { fetchUsers } from '../store/UsersSlice';
 
 const Reservations = () => {
   const dispatch = useDispatch();

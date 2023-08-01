@@ -1,25 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const MovieCard = ({
+const ServiceCard = ({
   name, image, details, price, id,
 }) => {
   const rating = Math.round((Math.random() * (5 - 4) + 4) * 10) / 10;
 
   return (
     <div>
-      <div className="singlecard p-5">
-        <NavLink to={{ pathname: `/movies/${id}` }}>
-          <div className="image-size-div flex justify-center">
-            <div className={`image-circle-background card${id}`}>
-              <img src={image} alt={name} className="movie-image-size" />
-            </div>
-          </div>
-        </NavLink>
-        <NavLink to={{ pathname: `/movies/${id}` }}>
-          <h4 className="bold-font movie-name">{name}</h4>
-        </NavLink>
+      <Link
+        to={{
+          pathname: `/movies/${id}`,
+        }}
+        className="singlecard"
+      >
+        <img src={image} alt={name} className="movie-image" />
+        <h4 className="bold-font movie-name">{name}</h4>
         <hr className="dash" />
         <div className="movie-rating-price">
           <span className="bold-font gray-font">
@@ -35,14 +32,14 @@ const MovieCard = ({
           </span>
         </div>
         <p className="gray-font movie-details">{details}</p>
-      </div>
+      </Link>
     </div>
   );
 };
 
-export default MovieCard;
+export default ServiceCard;
 
-MovieCard.propTypes = {
+ServiceCard.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   details: PropTypes.string.isRequired,
