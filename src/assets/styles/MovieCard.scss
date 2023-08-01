@@ -2,8 +2,13 @@
   width: 20rem;
   overflow: hidden;
 
+  .image-circle-background {
+    border-radius: 50%;
+    background-color: #3b10a8;
+  }
+
   .movie-image-size {
-    width: 100%;
+    width: 80%;
   }
 }
 
