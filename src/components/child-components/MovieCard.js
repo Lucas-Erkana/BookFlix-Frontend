@@ -11,7 +11,9 @@ const MovieCard = ({
     <div>
       <div className="singlecard">
         <NavLink to={{ pathname: `/services/${id}` }}>
-          <img src={image} alt={name} className="service-image" />
+          <div className="h-4 ">
+            <img src={image} alt={name} className="service-image" />
+          </div>
         </NavLink>
         <NavLink to={{ pathname: `/services/${id}` }}>
           <h4 className="bold-font service-name">{name}</h4>
