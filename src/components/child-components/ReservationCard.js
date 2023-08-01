@@ -37,7 +37,7 @@ const ReservationCard = ({
         </p>
       </div>
 
-      <button type="button" className="btn btn-danger" onClick={handleCancel}>
+      <button type="button" className="btn btn-danger cancel-reserve" onClick={handleCancel}>
         Cancel
       </button>
     </div>

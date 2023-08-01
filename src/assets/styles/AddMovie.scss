@@ -1,7 +1,7 @@
 .add-movie-container {
   background:
     linear-gradient(0deg, rgb(146 185 10 / 88%), rgb(146 185 12 / 88%)),
-    url("../images/add-movie.jpg");
+    url("../images/reservation.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -14,7 +14,8 @@
 }
 
 .form-control {
-  background: transparent;
+  background-color: rgba(0, 0, 0, 0.175);
+  border: 2px solid white;
 }
 
 .form-control::placeholder {
@@ -40,9 +41,9 @@
 }
 
 .add-movie {
-  background-color: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
+  background-color: rgba(0, 0, 0, 0.175);
 }
 
 .add-movie:hover {
@@ -52,7 +53,8 @@
 
 .cancel-add {
   background-color: transparent;
-  border: 1px solid white;
+  background-color: rgba(0, 0, 0, 0.175);
+  border: 2px solid white;
   color: white;
 }
 
@@ -61,7 +63,23 @@
   color: white;
 }
 
-.add-price-input {
+.add-price-input-l,
+.add-price-input-r {
   background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.175);
   border-radius: 2rem;
+  border: 2px solid white;
+}
+
+.add-price-input-l {
+  border-right: none;
+}
+
+.add-price-input-r {
+  border-left: none;
+}
+
+.ticket-price {
+  border-left: none;
+  border-right: none;
 }

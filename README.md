@@ -141,6 +141,7 @@ $ npm test
 👤 **Sam**
 
 - GitHub: [@SamTush](https://github.com/SamTush)
+- LinkedIn: [SamTush](https://www.linkedin.com/in/samson-tush/)
 
 
 

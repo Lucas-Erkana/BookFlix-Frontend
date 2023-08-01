@@ -44,10 +44,11 @@ const ReserveFromMovie = ({ handleCancelClick }) => {
   };
 
   const formStyle = {
-    backgroundImage: `url(${movie && movie.image})`,
-    backgroundSize: 'contain',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
+    // backgroundImage: `url(${movie && movie.image})`,
+    // backgroundSize: 'contain',
+    // backgroundPosition: 'center',
+    // backgroundRepeat: 'no-repeat',
+    backgroundColor: '#98bf11',
   };
   return (
     <div className="col-md container-main reservation-form-body p-0 reservation-container" style={formStyle}>

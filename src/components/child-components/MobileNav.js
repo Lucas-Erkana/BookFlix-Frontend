@@ -96,7 +96,7 @@ const MobileNav = () => {
                       <Nav.Link
                         className="nav-link"
                         onClick={handleOffcanvasClose}
-                        href="/delete-movies"
+                        href="/delete-movie"
                       >
                         Delete Movies
                       </Nav.Link>

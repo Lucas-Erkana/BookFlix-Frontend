@@ -47,16 +47,17 @@
 
 .fa-angle-down {
   color: white;
+  margin-left: -1rem;
 }
 
 .reservation-form-body {
-  background-image: url("https://source.unsplash.com/random/?lightgreen,abstract");
+  background-image: url("../images/reservation.png");
   background-size: cover;
   background-position: center;
 }
 
 .reservation-form-overlay {
-  background-color: rgba(12, 12, 12, 0.88); //color for background
+  background-color: rgba(146, 185, 10, 0.88);
   height: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -73,15 +74,8 @@
 }
 
 input:disabled {
-  background-color: rgba(0, 0, 0, 0.175) !important;
-  border-radius: 50px !important;
-  border: 3px solid black !important; // Dark black border
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
-  &:focus {
-    border-color: $primary !important; // Glowing border color on focus
-    box-shadow: 0 0 10px rgba(146, 185, 10, 0.8), 0 0 10px rgba(146, 185, 10, 0.8) !important; // Stronger box shadow on focus for glow effect
-  }
+  background-color: rgba(255, 253, 253, 0.184) !important;
+  border: 2px solid rgba(128, 128, 128, 0.556) !important;
 }
 
 #reservation-form {
@@ -100,12 +94,11 @@ input:disabled {
     width: 55vw;
   }
 
-  button[type="submit"],
   input,
   .select-wrapper {
     border-radius: 50px;
     background-color: rgba(0, 0, 0, 0.175);
-    border: 3px solid black; // Dark black border
+    border: 2px solid rgb(242, 232, 232);
     color: white;
     padding: 0 7%;
     width: 100%;
@@ -113,7 +106,7 @@ input:disabled {
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
     &:focus {
-      border-color: $primary; // Glowing border color on focus
+      border-color: $primary;
       box-shadow: 0 0 10px rgba(146, 185, 10, 0.8), 0 0 10px rgba(146, 185, 10, 0.8); // Stronger box shadow on focus for glow effect
     }
   }
