@@ -50,7 +50,7 @@ const ReserveFromMovie = ({ handleCancelClick }) => {
     backgroundRepeat: 'no-repeat',
   };
   return (
-    <div className="col-md container-main reservation-form-body p-0" style={formStyle}>
+    <div className="col-md container-main reservation-form-body p-0 reservation-container" style={formStyle}>
       <div className="reservation-form-overlay col-md p-2 m-0 d-flex flex-column align-items-center justify-content-center">
 
         <h1 className="heading text-light text-uppercase text-center">
