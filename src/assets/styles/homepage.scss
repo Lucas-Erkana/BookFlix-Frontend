@@ -16,7 +16,7 @@
   text-align: center;
 }
 
-.service-list {
+.movie-list {
   display: flex;
   flex-wrap: wrap;
   padding: 3rem 0;
@@ -30,6 +30,23 @@
   justify-content: center;
 }
 
+.movie-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.movie-name {
+  margin-top: 16px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0 4px;
+}
+
+.movie-name:hover {
+  color: #98bf11;
+}
+
 .singlecard {
   display: flex;
   flex-direction: column;
@@ -38,6 +55,20 @@
   background-color: #fff;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.3s ease-in-out; // Add transition for smooth effect
+
+  &:hover {
+    transform: scale(1.05); // Add scale effect on hover
+    z-index: 1;
+
+    .movie-image {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .movie-name {
+      font-size: larger;
+    }
+  }
 
   img {
     width: 100%;
@@ -80,14 +111,14 @@ i {
   color: #575756;
 }
 
-.service-rating-price {
+.movie-rating-price {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 3%;
 }
 
-.service-circle-splitter {
+.movie-circle-splitter {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -103,17 +134,7 @@ i {
   color: #be710c;
 }
 
-.service-name {
-  margin-top: 16px;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 0 4px;
-}
-
-.service-name:hover {
-  color: #98bf11;
-}
-
-.service-details {
+.movie-details {
   margin-top: 4%;
   text-align: justify;
   font-size: 0.9rem;
@@ -122,13 +143,6 @@ i {
   -webkit-box-orient: vertical;
   overflow: hidden;
   padding: 0 24px;
-}
-
-.service-image {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  object-position: top center;
 }
 
 .homepage-heading {
@@ -151,7 +165,7 @@ i {
     display: block;
   }
 
-  .service-list {
+  .movie-list {
     padding: 3rem 0;
   }
 

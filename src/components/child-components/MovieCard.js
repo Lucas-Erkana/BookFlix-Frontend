@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import '../../assets/styles/MovieCard.scss';
 
 const MovieCard = ({
   name, image, details, price, id,
@@ -9,30 +10,30 @@ const MovieCard = ({
 
   return (
     <div>
-      <div className="singlecard">
-        <NavLink to={{ pathname: `/services/${id}` }}>
-          <div className="h-4 ">
-            <img src={image} alt={name} className="service-image" />
+      <div className="singlecard p-5">
+        <NavLink to={{ pathname: `/movies/${id}` }}>
+          <div className="image-size-div flex justify-center">
+            <img src={image} alt={name} className="movie-image-size w-11/12" />
           </div>
         </NavLink>
-        <NavLink to={{ pathname: `/services/${id}` }}>
-          <h4 className="bold-font service-name">{name}</h4>
+        <NavLink to={{ pathname: `/movies/${id}` }}>
+          <h4 className="bold-font movie-name">{name}</h4>
         </NavLink>
         <hr className="dash" />
-        <div className="service-rating-price">
+        <div className="movie-rating-price">
           <span className="bold-font gray-font">
             <i className="fa-sharp fa-solid fa-star-half-stroke" />
             {' '}
             {rating}
           </span>
-          <span className="service-circle-splitter" />
+          <span className="movie-circle-splitter" />
           <span className="bold-font gray-font">
             <i className="fa-solid fa-dollar-sign" />
             {' '}
             {price}
           </span>
         </div>
-        <p className="gray-font service-details">{details}</p>
+        <p className="gray-font movie-details">{details}</p>
       </div>
     </div>
   );
