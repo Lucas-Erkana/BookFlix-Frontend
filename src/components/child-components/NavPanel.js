@@ -110,19 +110,19 @@ const NavPanel = () => {
               {' '}
               <strong>
                 <span>
-                  <a href="https://github.com/Lucash2022">L</a>
+                  <a href="https://github.com/Lucash2022" className="intialsL">L</a>
                 </span>
 &nbsp;
                 <span>
-                  <a href="https://github.com/torobucci">K</a>
+                  <a href="https://github.com/torobucci" className="intialsK">K</a>
                 </span>
 &nbsp;
                 <span>
-                  <a href="https://github.com/SabaAhmad404">A</a>
+                  <a href="https://github.com/SabaAhmad404" className="intialsA">S</a>
                 </span>
 &nbsp;
                 <span>
-                  <a href="https://github.com/SamTush">T</a>
+                  <a href="https://github.com/SamTush" className="intialsT">S</a>
                 </span>
 &nbsp;
               </strong>

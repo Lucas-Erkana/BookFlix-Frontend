@@ -11,7 +11,7 @@ const DeleteMovie = () => {
     dispatch(fetchMovies());
   }, [dispatch]);
   return (
-    <div className="container-fluid p-5">
+    <div className="container-fluid p-5 delete-container">
       {movies.map((movie) => (
         <div className="row g-3 p-3" key={movie.id}>
 
