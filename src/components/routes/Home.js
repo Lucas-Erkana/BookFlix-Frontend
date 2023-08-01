@@ -31,6 +31,9 @@ const Home = () => {
 
   const slidesPerView = isMobile ? 1 : 3;
 
+  // Filter out the third card from the slice of cards
+  const beginningSlides = cards.slice(-slidesPerView).filter((card) => card.id !== 3);
+
   return (
     <div className="home col-md col">
       <h1 className="bold-font homepage-heading text-uppercase">
@@ -47,11 +50,11 @@ const Home = () => {
           modules={[Navigation, A11y]}
           spaceBetween={0}
           slidesPerView={slidesPerView}
-          navigation
+          navigation // Add navigation prop
           loop // Enable looping
         >
           {/* Add slides at the beginning for a seamless loop */}
-          {cards.slice(-slidesPerView).map((card) => (
+          {beginningSlides.map((card) => (
             <SwiperSlide key={card.id}>
               <MovieCard
                 name={card.name}
@@ -65,6 +68,9 @@ const Home = () => {
 
           {/* Original slides */}
           {cards.map((card) => (
+            // Exclude the third card from the original slides
+            card.id !== 3
+            && (
             <SwiperSlide key={card.id}>
               <MovieCard
                 name={card.name}
@@ -74,6 +80,7 @@ const Home = () => {
                 id={card.id}
               />
             </SwiperSlide>
+            )
           ))}
 
           {/* Add slides at the end for a seamless loop */}
