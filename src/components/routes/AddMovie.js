@@ -91,9 +91,9 @@ const AddMovie = () => {
           </div>
 
           <div className="input-group col-md-12">
-            <span className="input-group-text add-price-input">$</span>
-            <input type="float" placeholder="Ticket price" className="form-control" value={price} onChange={(e) => setPrice(e.target.value)} />
-            <span className="input-group-text add-price-input">.00</span>
+            <span className="input-group-text add-price-input-l">$</span>
+            <input type="float" placeholder="Ticket price" className="form-control ticket-price" value={price} onChange={(e) => setPrice(e.target.value)} />
+            <span className="input-group-text add-price-input-r">.00</span>
           </div>
           <div className="col-md-12">
             <input type="textarea" placeholder="Movie Details" className="form-control" value={details} onChange={(e) => setDetails(e.target.value)} />

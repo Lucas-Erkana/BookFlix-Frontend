@@ -34,15 +34,15 @@ const NavPanel = () => {
 
           <ul className="nav flex-column mt-3">
             <li className="nav-item">
-              <NavLink className="nav-link ms-3 p-2" to="/">Movies</NavLink>
+              <NavLink className="nav-link ms-3 ps-3" to="/">Movies</NavLink>
             </li>
             {isLoggedIn && (
             <>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to="/reserve">Reserve</NavLink>
+                <NavLink className="nav-link ms-3 ps-3" to="/reserve">Reserve</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to="/reservations">My Reservations</NavLink>
+                <NavLink className="nav-link ms-3 ps-3" to="/reservations">Reservations</NavLink>
               </li>
 
             </>
@@ -50,10 +50,10 @@ const NavPanel = () => {
             {isLoggedIn && isAdmin && (
             <>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to="/add-movie">Add Movie</NavLink>
+                <NavLink className="nav-link ms-3 ps-3" to="/add-movie">Add Movie</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link ms-3 p-2" to="/delete-movie">Delete Movies</NavLink>
+                <NavLink className="nav-link ms-3 ps-3" to="/delete-movie">Delete Movies</NavLink>
               </li>
             </>
             )}

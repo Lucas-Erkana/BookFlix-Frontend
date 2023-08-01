@@ -19,7 +19,7 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://book-flix-app.onrender.com/signup', {
+      const response = await axios.post('http://localhost:3000/signup', {
         user: {
           full_name: formData.fullName,
           email: formData.email,
