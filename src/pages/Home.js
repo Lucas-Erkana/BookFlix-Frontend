@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Navigation, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -17,12 +17,27 @@ const Home = () => {
     dispatch(fetchMovies());
   }, [dispatch]);
 
-  const isMobile = window.innerWidth <= 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 968);
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const slidesPerView = isMobile ? 1 : 3;
+
+  // Filter out the third card from the slice of cards
+  const beginningSlides = cards.slice(-slidesPerView).filter((card) => card.id !== 3);
 
   return (
     <div className="home col-md col">
-      <h1 className="bold-font homepage-heading">
-        OUR MOVIES
+      <h1 className="bold-font homepage-heading text-uppercase">
+        movies to watch
       </h1>
       <p className="gray-font">
         Please select a Movie to reserve
@@ -34,13 +49,43 @@ const Home = () => {
           className="movie-list col-10"
           modules={[Navigation, A11y]}
           spaceBetween={0}
-          slidesPerView={isMobile ? 1 : 3}
-          navigation
+          slidesPerView={slidesPerView}
+          navigation // Add navigation prop
+          loop // Enable looping
         >
+          {/* Add slides at the beginning for a seamless loop */}
+          {beginningSlides.map((card) => (
+            <SwiperSlide key={card.id}>
+              <MovieCard
+                name={card.name}
+                image={card.image}
+                details={card.details}
+                price={card.price}
+                id={card.id}
+              />
+            </SwiperSlide>
+          ))}
+
+          {/* Original slides */}
           {cards.map((card) => (
-            <SwiperSlide
-              key={card.id}
-            >
+            // Exclude the third card from the original slides
+            card.id !== 3
+            && (
+            <SwiperSlide key={card.id}>
+              <MovieCard
+                name={card.name}
+                image={card.image}
+                details={card.details}
+                price={card.price}
+                id={card.id}
+              />
+            </SwiperSlide>
+            )
+          ))}
+
+          {/* Add slides at the end for a seamless loop */}
+          {cards.slice(0, slidesPerView).map((card) => (
+            <SwiperSlide key={card.id}>
               <MovieCard
                 name={card.name}
                 image={card.image}
