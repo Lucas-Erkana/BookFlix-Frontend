@@ -16,35 +16,11 @@
   text-align: center;
 }
 
-.movie-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 3rem 0;
-  justify-content: center;
-}
-
 .carousel-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-
-.movie-image {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  object-position: top center;
-}
-
-.movie-name {
-  margin-top: 16px;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 0 4px;
-}
-
-.movie-name:hover {
-  color: #98bf11;
 }
 
 .singlecard {
