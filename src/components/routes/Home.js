@@ -29,6 +29,8 @@ const Home = () => {
     };
   }, []);
 
+  const slidesPerView = isMobile ? 1 : 3;
+
   return (
     <div className="home col-md col">
       <h1 className="bold-font homepage-heading text-uppercase">
@@ -44,13 +46,39 @@ const Home = () => {
           className="movie-list col-10"
           modules={[Navigation, A11y]}
           spaceBetween={0}
-          slidesPerView={isMobile ? 1 : 3}
+          slidesPerView={slidesPerView}
           navigation
+          loop // Enable looping
         >
+          {/* Add slides at the beginning for a seamless loop */}
+          {cards.slice(-slidesPerView).map((card) => (
+            <SwiperSlide key={card.id}>
+              <MovieCard
+                name={card.name}
+                image={card.image}
+                details={card.details}
+                price={card.price}
+                id={card.id}
+              />
+            </SwiperSlide>
+          ))}
+
+          {/* Original slides */}
           {cards.map((card) => (
-            <SwiperSlide
-              key={card.id}
-            >
+            <SwiperSlide key={card.id}>
+              <MovieCard
+                name={card.name}
+                image={card.image}
+                details={card.details}
+                price={card.price}
+                id={card.id}
+              />
+            </SwiperSlide>
+          ))}
+
+          {/* Add slides at the end for a seamless loop */}
+          {cards.slice(0, slidesPerView).map((card) => (
+            <SwiperSlide key={card.id}>
               <MovieCard
                 name={card.name}
                 image={card.image}

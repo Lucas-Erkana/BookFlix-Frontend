@@ -38,6 +38,20 @@
   background-color: #fff;
   text-decoration: none;
   color: inherit;
+  transition: transform 0.3s ease-in-out; // Add transition for smooth effect
+
+  &:hover {
+    transform: scale(1.05); // Add scale effect on hover
+    z-index: 1;
+
+    .movie-image {
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .movie-name {
+      font-size: larger;
+    }
+  }
 
   img {
     width: 100%;
