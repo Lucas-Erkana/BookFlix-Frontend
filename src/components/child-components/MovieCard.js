@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
+import '../../assets/styles/MovieCard.scss';
 
 const MovieCard = ({
   name, image, details, price, id,
@@ -9,9 +10,11 @@ const MovieCard = ({
 
   return (
     <div>
-      <div className="singlecard">
+      <div className="singlecard p-5">
         <NavLink to={{ pathname: `/movies/${id}` }}>
-          <img src={image} alt={name} className="movie-image" />
+          <div className="image-size-div flex justify-center">
+            <img src={image} alt={name} className="movie-image-size" />
+          </div>
         </NavLink>
         <NavLink to={{ pathname: `/movies/${id}` }}>
           <h4 className="bold-font movie-name">{name}</h4>

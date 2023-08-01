@@ -50,13 +50,13 @@
 }
 
 .reservation-form-body {
-  background-image: url("../images/reservation.png");
+  background-image: url("https://source.unsplash.com/random/?lightgreen,abstract");
   background-size: cover;
   background-position: center;
 }
 
 .reservation-form-overlay {
-  background-color: rgba(146, 185, 10, 0.88);
+  background-color: rgba(12, 12, 12, 0.88); //color for background
   height: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
 

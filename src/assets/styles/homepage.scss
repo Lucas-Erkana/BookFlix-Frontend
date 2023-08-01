@@ -30,6 +30,23 @@
   justify-content: center;
 }
 
+.movie-image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.movie-name {
+  margin-top: 16px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0 4px;
+}
+
+.movie-name:hover {
+  color: #98bf11;
+}
+
 .singlecard {
   display: flex;
   flex-direction: column;
@@ -46,10 +63,6 @@
 
     .movie-image {
       box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    }
-
-    .movie-name:hover {
-      color: #98bf11;
     }
 
     .movie-name {
@@ -69,31 +82,171 @@
   margin: 0;
 }
 
-.swiper-button-next {
-  width: 30px;
-  height: 30px;
-  font-size: 24px;
-  line-height: 30px;
-  text-align: center;
-  position: absolute;
-  top: calc(50% - 15px);
-  right: 0;
-
-  @include swiper-arrow(0% 25% 25% 0% / 50% 50% 50% 50%);
-
-  background-image: url(../images/right.png);
-}
-
+.swiper-button-next,
 .swiper-button-prev {
   width: 30px;
   height: 30px;
+  border-radius: 0 50% 50% 0;
+  background-color: green;
+  color: white;
   font-size: 24px;
   line-height: 30px;
   text-align: center;
   position: absolute;
   top: calc(50% - 15px);
+}
 
-  @include swiper-arrow(25% 0% 0% 25% /50% 50% 50% 50%);
+.swiper-button-next {
+  right: 0;
+  border-radius: 50% 0 0 50%;
+}
 
-  background-image: url(../images/left.png);
+.swiper-button-prev {
+  left: 0;
+}
+
+.bold-font {
+  font-weight: 700;
+}
+
+.gray-font {
+  color: #575756;
+}
+
+.dash {
+  border: 1px dashed gray;
+  width: 40%;
+  margin: 3% 0;
+  align-self: center;
+}
+
+.home-dash {
+  width: 20%;
+  margin: 2% 0;
+}
+
+i {
+  color: #575756;
+}
+
+.movie-rating-price {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 3%;
+}
+
+.movie-circle-splitter {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: block;
+  background-color: #575756;
+}
+
+.fa-star-half-stroke {
+  color: green;
+}
+
+.fa-dollar-sign {
+  color: #be710c;
+}
+
+.movie-details {
+  margin-top: 4%;
+  text-align: justify;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding: 0 24px;
+}
+
+.homepage-heading {
+  margin-top: 25%;
+}
+
+@media (min-width: 801px) {
+  .home {
+    align-items: center;
+    width: 80vw;
+  }
+
+  .singlecard {
+    img {
+      width: 80%;
+    }
+  }
+
+  aside {
+    display: block;
+  }
+
+  .movie-list {
+    padding: 3rem 0;
+  }
+
+  .bold-font {
+    font-weight: 700;
+  }
+
+  .gray-font {
+    color: #575756;
+  }
+
+  .dash {
+    border: 1px dashed gray;
+    width: 40%;
+    margin: 3% 0;
+  }
+
+  .home-dash {
+    width: 10%;
+    margin: 2% 0;
+  }
+
+  .swiper-button-prev {
+    @include swiper-arrow(0% 25% 25% 0% / 50% 50% 50% 50%);
+
+    background-image: url(../images/left.png);
+  }
+
+  .swiper-button-next {
+    @include swiper-arrow(25% 0 0 25% / 50% 50% 50% 50%);
+
+    background-image: url(../images/right.png);
+  }
+
+  .swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled {
+    opacity: 1;
+    pointer-events: none;
+    background-color: #efefef;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      display: none;
+    }
+
+    display: block;
+  }
+
+  .carousel-container {
+    position: relative;
+  }
+
+  .react-multi-carousel-track {
+    li {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+    }
+  }
+
+  .homepage-heading {
+    margin-top: 5%;
+  }
 }
