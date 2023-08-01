@@ -1,6 +1,7 @@
 $primary: #98bf11 !default;
 $gray: #efefef;
 $gray-font: #adadaf;
+$red:#f00;
 
 @import "~bootstrap/scss/bootstrap.scss";
 @import "./reservation.scss";
@@ -11,11 +12,13 @@ $gray-font: #adadaf;
 @import "./AddMovie.scss";
 @import "./NavPanel.scss";
 @import "./MobileNav.scss";
+@import "./MovieCard.scss";
 
 :root {
   --primary-color: $primary;
   --gray-color-font: $gray-font;
   --gray-color: $gray;
+  --red-color: $red;
 }
 
 #root {

@@ -148,6 +148,7 @@ select {
   padding: 8px;
   color: white; // Set text color to white
   text-shadow: 0 0 5px rgba(146, 185, 10, 0.8); // Add a text glow effect
+  text-decoration: none;
 }
 
 @media screen and (min-width: 1024px) {
@@ -180,7 +181,7 @@ select {
 
     .card-column {
       display: none;
-      //   display: flex;
+      display: flex;
       flex-direction: column;
       align-items: center;
       width: 16%;
