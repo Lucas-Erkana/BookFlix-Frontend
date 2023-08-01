@@ -14,8 +14,8 @@
 }
 
 .form-control {
-  background: transparent;
   background-color: rgba(0, 0, 0, 0.175);
+  border: 2px solid white;
 }
 
 .form-control::placeholder {
@@ -41,7 +41,7 @@
 }
 
 .add-movie {
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
   background-color: rgba(0, 0, 0, 0.175);
 }
@@ -54,7 +54,7 @@
 .cancel-add {
   background-color: transparent;
   background-color: rgba(0, 0, 0, 0.175);
-  border: 1px solid white;
+  border: 2px solid white;
   color: white;
 }
 

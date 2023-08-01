@@ -50,9 +50,6 @@
 }
 
 .reservation-form-body {
-  background:
-    linear-gradient(0deg, rgb(146 185 10 / 100%), rgb(146 185 12 / 100%)),
-    url("https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80");
   background-image: url("../images/reservation.png");
   background-size: cover;
   background-position: center;
@@ -101,7 +98,7 @@ input:disabled {
   .select-wrapper {
     border-radius: 50px;
     background-color: rgba(0, 0, 0, 0.175);
-    border: 3px solid rgb(242, 232, 232); // Dark black border
+    border: 2px solid rgb(242, 232, 232);
     color: white;
     padding: 0 7%;
     width: 100%;
@@ -109,7 +106,7 @@ input:disabled {
     transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 
     &:focus {
-      border-color: $primary; // Glowing border color on focus
+      border-color: $primary;
       box-shadow: 0 0 10px rgba(146, 185, 10, 0.8), 0 0 10px rgba(146, 185, 10, 0.8); // Stronger box shadow on focus for glow effect
     }
   }
