@@ -12,7 +12,7 @@ const MovieCard = ({
       <div className="singlecard p-5">
         <NavLink to={{ pathname: `/movies/${id}` }}>
           <div className="image-size-div flex justify-center">
-            <div className="image-circle-background">
+            <div className={`image-circle-background card${id}`}>
               <img src={image} alt={name} className="movie-image-size" />
             </div>
           </div>
