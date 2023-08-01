@@ -47,6 +47,7 @@
 
 .fa-angle-down {
   color: white;
+  margin-left: -1rem;
 }
 
 .reservation-form-body {
@@ -93,7 +94,6 @@ input:disabled {
     width: 55vw;
   }
 
-  button[type="submit"],
   input,
   .select-wrapper {
     border-radius: 50px;
