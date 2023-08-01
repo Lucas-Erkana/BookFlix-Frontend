@@ -101,7 +101,7 @@ const Navbar = ({ sidebarOpen }) => {
             <Link to="/" className="social-link">
               <FaLinkedin />
             </Link>
-            <Link to="hhttps://github.com/Lucash2022/BookFlix-Frontend" className="social-link">
+            <Link to="https://github.com/Lucash2022/BookFlix-Frontend" className="social-link">
               <FaGithub />
             </Link>
           </div>

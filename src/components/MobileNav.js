@@ -159,7 +159,7 @@ const MobileNav = () => {
                       <FaLinkedin />
                     </Link>
                     <Link
-                      to="https://github.com/PrantoshB/HandyMate-Frontend"
+                      to="https://github.com/Lucash2022/BookFlix-Frontend"
                       className="social-link"
                     >
                       <FaGithub />
