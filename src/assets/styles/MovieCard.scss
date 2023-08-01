@@ -11,6 +11,9 @@
   color: black;
   text-decoration: none; /* Add this line to remove underline */
   text-decoration: underline;
+  margin-top: 16px;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 0 4px;
 }
 
 .movie-image {
@@ -18,12 +21,6 @@
   aspect-ratio: 1/1;
   object-fit: cover;
   object-position: top center;
-}
-
-.movie-name {
-  margin-top: 16px;
-  background-color: rgba(255, 255, 255, 0.75);
-  padding: 0 4px;
 }
 
 .movie-name:hover {
