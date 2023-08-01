@@ -10,7 +10,6 @@ import Reservations from './components/routes/Reservations';
 import ReservationForm from './components/routes/ReservationForm';
 import DeleteMovie from './components/routes/DeleteMovie';
 import './assets/styles/custom.scss';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
