@@ -1,4 +1,15 @@
+.reservation-container {
+  background:
+    linear-gradient(0deg, rgba(146, 185, 10, 0.88), rgba(146, 185, 12, 0.88)),
+    url("../images/reservation.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+}
+
 .reservation-list {
+  border-color: black;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -12,7 +23,8 @@
   align-items: center;
   border-radius: 4px;
   padding: 16px;
-  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 
   .image-and-text {
     display: flex;
@@ -41,12 +53,15 @@
   background:
     linear-gradient(0deg, rgb(146 185 10 / 100%), rgb(146 185 12 / 100%)),
     url("https://images.unsplash.com/photo-1622547748225-3fc4abd2cca0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80");
+  background-image: url("../images/reservation.png");
   background-size: cover;
   background-position: center;
 }
 
 .reservation-form-overlay {
+  background-color: rgba(146, 185, 10, 0.88);
   height: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
 
   .heading {
     letter-spacing: 8px;
@@ -61,8 +76,15 @@
 }
 
 input:disabled {
-  background-color: rgba(255, 253, 253, 0.184) !important;
-  border: 2px solid rgba(128, 128, 128, 0.556) !important;
+  background-color: rgba(0, 0, 0, 0.175) !important;
+  border-radius: 50px !important;
+  border: 3px solid black !important; // Dark black border
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+  &:focus {
+    border-color: $primary !important; // Glowing border color on focus
+    box-shadow: 0 0 10px rgba(146, 185, 10, 0.8), 0 0 10px rgba(146, 185, 10, 0.8) !important; // Stronger box shadow on focus for glow effect
+  }
 }
 
 #reservation-form {
@@ -85,15 +107,18 @@ input:disabled {
   input,
   .select-wrapper {
     border-radius: 50px;
-  }
-
-  input,
-  .select-wrapper {
     background-color: rgba(0, 0, 0, 0.175);
-    border: 2px solid white;
+    border: 3px solid black; // Dark black border
     color: white;
     padding: 0 7%;
     width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:focus {
+      border-color: $primary; // Glowing border color on focus
+      box-shadow: 0 0 10px rgba(146, 185, 10, 0.8), 0 0 10px rgba(146, 185, 10, 0.8); // Stronger box shadow on focus for glow effect
+    }
   }
 }
 
@@ -124,16 +149,20 @@ select {
   border-radius: 4px;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
   padding: 8px;
+  color: white; // Set text color to white
+  text-shadow: 0 0 5px rgba(146, 185, 10, 0.8); // Add a text glow effect
 }
 
 @media screen and (min-width: 1024px) {
   .reservation-card {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     border-radius: 4px;
     padding: 16px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 
     .image-and-text {
       flex-direction: row;

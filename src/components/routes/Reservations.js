@@ -49,7 +49,7 @@ const Reservations = () => {
     : reservations.filter((reservation) => reservation.user_id === Number(userId));
 
   return (
-    <div className="col-md col container-main d-flex flex-column reservations align-items-center p-3">
+    <div className="col-md col container-main d-flex flex-column reservations align-items-center p-3 reservation-container">
       <div className="reservation-list container">
         <Link className="btn btn-success my-4 align-self-end" to="/reserve">Add Reservation</Link>
         {userReservations.map((reservation) => (

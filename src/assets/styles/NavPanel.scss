@@ -37,7 +37,7 @@
   font-weight: 450;
   text-align: left;
   text-transform: uppercase;
-  color: #212529;
+  color: black !important;
 }
 
 .nav-link:hover {
@@ -52,6 +52,42 @@
 
 .social-link {
   font-size: 24px;
+  color: black;
+}
+
+.intialsL,
+.intialsK,
+.intialsA,
+.intialsT {
+  color: #98bf11 !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  text-shadow: 0 0 10px rgba(152, 191, 17, 0.8) !important; /* Text glow effect */
+
+  /* Animation to rotate each letter */
+  animation: rotateLetters 1.5s infinite alternate ease-in-out;
+
+  /* Transition for hover effect */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Keyframes for letter rotation animation */
+@keyframes rotateLetters {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(10deg);
+  }
+}
+
+/* Hover effect */
+.intialsL:hover,
+.intialsK:hover,
+.intialsA:hover,
+.intialsT:hover {
+  transform: scale(2); /* Enlarge the letter on hover */
 }
 
 @media screen and (max-width: 768px) {
