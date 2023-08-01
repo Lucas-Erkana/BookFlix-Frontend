@@ -9,6 +9,7 @@
   top: 16px;
   left: 16px;
   z-index: 1;
+  display: none; /* Hide the toggler by default on larger screens */
 }
 
 .navbar-toggler-icon {
@@ -19,8 +20,12 @@
   box-shadow: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 767px) {
   .mobile-nav {
-    display: none;
+    display: none; /* Hide the mobile-nav on smaller screens */
+  }
+  
+  .navbar-toggler {
+    display: block; /* Show the toggler on smaller screens */
   }
 }
