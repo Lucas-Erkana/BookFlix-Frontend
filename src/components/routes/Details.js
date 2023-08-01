@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { FaAngleLeft } from 'react-icons/fa';
 import { fetchMovies } from '../../redux/MoviesSlice';
 import ReserveFromMovie from '../child-components/ReserveFromMovie';
+import IsAuthenticated from '../child-components/IsAuthenticated';
 
 const Details = () => {
   const { id } = useParams();
@@ -11,6 +12,7 @@ const Details = () => {
   const navigate = useNavigate();
   const movies = useSelector((state) => state.movies.movies);
   const movie = movies.find((movie) => movie.id === Number(id));
+  const isLoggedIn = IsAuthenticated();
 
   const [showForm, setShowForm] = useState(false);
 
@@ -93,7 +95,9 @@ const Details = () => {
                   </tr>
                 </tbody>
               </table>
+              {isLoggedIn && (
               <button type="button" onClick={() => handleReserveClick()} className="details-btn">Reserve</button>
+              )}
             </div>
           </div>
         </div>

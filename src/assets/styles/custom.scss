@@ -131,6 +131,11 @@ button {
   min-height: 100vh;
 }
 
+
+.offcanvas-header{
+  padding: 1.25rem 1.5625rem;
+}
+
 @media screen and (max-width: 768px) {
   .app-container {
     padding-left: 0;

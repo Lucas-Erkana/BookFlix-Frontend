@@ -4,6 +4,7 @@ import {
   FaFacebook, FaTwitter, FaLinkedin, FaGithub, FaSignInAlt, FaSignOutAlt,
 } from 'react-icons/fa';
 import { AiOutlineUserAdd } from 'react-icons/ai';
+import Admin from './IsAdmin';
 import logo from '../../assets/images/bookflix-logo.png';
 
 const NavPanel = () => {
@@ -12,10 +13,7 @@ const NavPanel = () => {
     const token = localStorage.getItem('token');
     return !!token;
   };
-  const Admin = () => {
-    const role = localStorage.getItem('role');
-    return role === 'admin';
-  };
+
   const isLoggedIn = isAuthenticated();
   const isAdmin = Admin();
 
@@ -62,7 +60,7 @@ const NavPanel = () => {
         </div>
         {/* Social Sharing Links */}
         <div className="social-sharing p-3 d-flex flex-column gap-2">
-          <ul className="d-flex justify-content-center gap-4 p-0">
+          <ul className="d-flex justify-content-center gap-3 p-0">
             {isLoggedIn ? (
               <li>
                 <button type="button" className="logout btn btn-outline-danger btn-small" onClick={handleLogout}>
