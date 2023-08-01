@@ -116,7 +116,7 @@ i {
   height: 10px;
   border-radius: 50%;
   display: block;
-  background-color: #575756;
+  background-color: $primary;
 }
 
 .fa-star-half-stroke {
@@ -210,7 +210,7 @@ i {
   .swiper-button-prev.swiper-button-disabled {
     opacity: 1;
     pointer-events: none;
-    background-color: #efefef;
+    background-color: $primary;;
   }
 
   .swiper-button-prev,

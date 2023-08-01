@@ -126,10 +126,6 @@ const Navbar = ({ sidebarOpen }) => {
                   <a href="https://github.com/SamTush">T</a>
                 </span>
 &nbsp;
-                <span>
-                  <a href="https://github.com/FaranoshAmini">F</a>
-                </span>
-
               </strong>
               {' '}
               Group
