@@ -95,10 +95,7 @@
   position: absolute;
   top: calc(50% - 15px);
   right: 0;
-
-  @include swiper-arrow(0% 25% 25% 0% / 50% 50% 50% 50%);
-
-  background-image: url(../images/right.png);
+  border-radius: 50% 0 0 50%;
 }
 
 .swiper-button-prev {
@@ -111,9 +108,25 @@
   position: absolute;
   top: calc(50% - 15px);
 
-  @include swiper-arrow(25% 0% 0% 25% /50% 50% 50% 50%);
+  @include swiper-arrow(0% 25% 25% 0% / 50% 50% 50% 50%);
 
   background-image: url(../images/left.png);
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+  pointer-events: none;
+  background-color: #efefef;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  &::after {
+    display: none;
+  }
+
+  display: block;
 }
 
 .bold-font {
@@ -215,34 +228,6 @@ i {
   .home-dash {
     width: 10%;
     margin: 2% 0;
-  }
-
-  .swiper-button-prev {
-    @include swiper-arrow(0% 25% 25% 0% / 50% 50% 50% 50%);
-
-    background-image: url(../images/left.png);
-  }
-
-  .swiper-button-next {
-    @include swiper-arrow(25% 0 0 25% / 50% 50% 50% 50%);
-
-    background-image: url(../images/right.png);
-  }
-
-  .swiper-button-next.swiper-button-disabled,
-  .swiper-button-prev.swiper-button-disabled {
-    opacity: 1;
-    pointer-events: none;
-    background-color: #efefef;
-  }
-
-  .swiper-button-prev,
-  .swiper-button-next {
-    &::after {
-      display: none;
-    }
-
-    display: block;
   }
 
   .carousel-container {
