@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
-import '../../assets/styles/MovieCard.scss';
 
 const MovieCard = ({
   name, image, details, price, id,
