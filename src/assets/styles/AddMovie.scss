@@ -15,7 +15,7 @@
 
 .form-control {
   background: transparent;
-  border: 2px solid white;
+  background-color: rgba(0, 0, 0, 0.175);
 }
 
 .form-control::placeholder {
@@ -41,9 +41,9 @@
 }
 
 .add-movie {
-  background-color: transparent;
   border: 1px solid white;
   color: white;
+  background-color: rgba(0, 0, 0, 0.175);
 }
 
 .add-movie:hover {
@@ -53,6 +53,7 @@
 
 .cancel-add {
   background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.175);
   border: 1px solid white;
   color: white;
 }
@@ -62,8 +63,10 @@
   color: white;
 }
 
-.add-price-input-l, .add-price-input-r{
+.add-price-input-l,
+.add-price-input-r {
   background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.175);
   border-radius: 2rem;
   border: 2px solid white;
 }
@@ -76,7 +79,7 @@
   border-left: none;
 }
 
-.ticket-price{
+.ticket-price {
   border-left: none;
   border-right: none;
 }
