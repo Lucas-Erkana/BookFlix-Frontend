@@ -171,24 +171,21 @@ const MobileNav = () => {
                       {' '}
                       <strong>
                         <span>
-                          <a href="https://github.com/PrantoshB">P</a>
+                          <a href="https://github.com/Lucash2022">L</a>
                         </span>
                         &nbsp;
                         <span>
-                          <a href="https://github.com/haliljon">H</a>
+                          <a href="https://github.com/torobucci">K</a>
                         </span>
                         &nbsp;
                         <span>
-                          <a href="https://github.com/utsargo">U</a>
+                          <a href="https://github.com/SabaAhmad404">A</a>
                         </span>
                         &nbsp;
                         <span>
-                          <a href="https://github.com/JacintaNgwu">J</a>
+                          <a href="https://github.com/SamTush">T</a>
                         </span>
                         &nbsp;
-                        <span>
-                          <a href="https://github.com/yetemegn-telaye">Y</a>
-                        </span>
                       </strong>
                       {' '}
                       Group
