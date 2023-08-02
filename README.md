@@ -89,15 +89,20 @@ $ git clone https://github.com/Lucash2022/BookFlix-Frontend.git
 
 
 
-### Usage
+### To run the project, execute the following command:
 
+### npm install
 
-Kindly modify the files as needed.
+to install all the dependencies used in the project
 
-In the project directory, you can run:
-```
-$ npm start
-```
+### npm run build
+
+to build this project from the source folder using webpack
+
+### npm run start
+
+in order to start a server and deploy the project locally
+
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
