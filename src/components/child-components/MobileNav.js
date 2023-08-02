@@ -13,22 +13,25 @@ import {
   FaSignOutAlt,
 } from 'react-icons/fa';
 import { AiOutlineUserAdd } from 'react-icons/ai';
+import IsAdmin from './IsAdmin';
+import IsAuthenticated from './IsAuthenticated';
 import logo from '../../assets/images/bookflix-logo.png';
 
 const MobileNav = () => {
   const navigate = useNavigate();
-  const isLoggedIn = true;
-  const isAdmin = true;
+  const isLoggedIn = IsAuthenticated();
+  const isAdmin = IsAdmin();
 
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
-  const handleLogout = () => {
-    localStorage.clear();
-    navigate('/signin');
-  };
-
   const handleOffcanvasClose = () => {
     setShowOffcanvas(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.clear();
+    handleOffcanvasClose();
+    navigate('/signin');
   };
 
   return (
@@ -116,14 +119,14 @@ const MobileNav = () => {
                     ) : (
                       <>
                         <li>
-                          <NavLink to="/signin" className="login btn btn-small">
+                          <NavLink to="/signin" className="login-btn btn btn-small" onClick={handleOffcanvasClose}>
                             <FaSignInAlt />
                             &nbsp;
                             Log In
                           </NavLink>
                         </li>
                         <li className="nav-item">
-                          <NavLink to="/signup" className="signup btn btn-small">
+                          <NavLink to="/signup" className="signup btn btn-small" onClick={handleOffcanvasClose}>
                             <AiOutlineUserAdd />
                             &nbsp;
                             Sign Up
@@ -149,7 +152,27 @@ const MobileNav = () => {
                   <p className="text-center m-0">
                     <small>
                       &copy; 2023
-                      <strong> BookFlix</strong>
+                      {' '}
+                      <strong>
+                        <span>
+                          <a href="https://github.com/Lucash2022" className="intialsL">L</a>
+                        </span>
+&nbsp;
+                        <span>
+                          <a href="https://github.com/torobucci" className="intialsK">K</a>
+                        </span>
+&nbsp;
+                        <span>
+                          <a href="https://github.com/SabaAhmad404" className="intialsA">S</a>
+                        </span>
+&nbsp;
+                        <span>
+                          <a href="https://github.com/SamTush" className="intialsT">S</a>
+                        </span>
+&nbsp;
+                      </strong>
+                      {' '}
+                      Group
                     </small>
                   </p>
                 </div>

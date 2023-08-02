@@ -44,10 +44,6 @@ const ReserveFromMovie = ({ handleCancelClick }) => {
   };
 
   const formStyle = {
-    // backgroundImage: `url(${movie && movie.image})`,
-    // backgroundSize: 'contain',
-    // backgroundPosition: 'center',
-    // backgroundRepeat: 'no-repeat',
     backgroundColor: '#98bf11',
   };
   return (

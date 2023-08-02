@@ -1,11 +1,9 @@
-// aside {
-//   display: none;
-// }
-.login {
+.signin-container {
   background-image: url("../../assets/images/signin.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  min-height: 100vh;
 }
 
 .side-image {
@@ -83,25 +81,30 @@
   position: relative;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .password-icon {
   position: absolute;
   right: 10px;
   cursor: pointer;
-  top: 40%; // Center vertically
-  transform: translateY(-50%); // Center vertically
-  font-size: 1.5rem; // Increase the size
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
 }
 
 .sign-form__input {
   width: 100%;
   padding: 15px;
-  padding-right: 40px; // Make more room for the icon
+  padding-right: 40px;
   margin-bottom: 1rem;
   border: 2px solid $primary;
   border-radius: 30px;
   font-size: 1rem;
+}
+
+.sign-form__input:focus {
+  outline: none;
 }
 
 .sign-in {
@@ -123,8 +126,6 @@
 .error-message {
   color: red;
 }
-
-// Continue with the rest of your styles as before...
 
 @media screen and (max-width: 768px) {
   .session-overlay {
@@ -171,7 +172,7 @@
     padding-top: 7px;
     padding-bottom: 7px;
     padding-left: 15px;
-    padding-right: 30px; // Adjust the padding to make room for the adjusted icon
+    padding-right: 30px;
   }
 
   .intro__title {
@@ -200,7 +201,14 @@
   }
 
   .password-icon {
-    right: 52px; // Adjust the position from the right
-    font-size: 1.2rem; // Adjust the size if necessary
+    right: 5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .password-icon {
+    right: 3.5rem;
+    font-size: 1.2rem;
   }
 }
