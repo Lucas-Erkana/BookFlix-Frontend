@@ -14,63 +14,61 @@ import AdminRoute from './components/child-components/AdminRoute';
 import './index.css';
 import './assets/styles/custom.scss';
 
-function App() {
-  return (
-    <div className="app-container col-md-12 d-flex">
-      <Routes>
-        <Route path="/" element={<LayOut />}>
-          <Route index element={<Home />} />
-          <Route exact path="/movies/:id" element={<Details />} />
+const App = () => (
+  <div className="app-container col-md-12 d-flex">
+    <Routes>
+      <Route path="/" element={<LayOut />}>
+        <Route index element={<Home />} />
+        <Route exact path="/movies/:id" element={<Details />} />
+        <Route
+          exact
+          path="/reserve"
+          element={<PrivateRoute />}
+        >
           <Route
             exact
             path="/reserve"
-            element={<PrivateRoute />}
-          >
-            <Route
-              exact
-              path="/reserve"
-              element={<ReservationForm />}
-            />
-          </Route>
+            element={<ReservationForm />}
+          />
+        </Route>
+        <Route
+          exact
+          path="/reservations"
+          element={<PrivateRoute />}
+        >
           <Route
             exact
             path="/reservations"
-            element={<PrivateRoute />}
-          >
-            <Route
-              exact
-              path="/reservations"
-              element={<Reservations />}
-            />
-          </Route>
+            element={<Reservations />}
+          />
+        </Route>
+        <Route
+          exact
+          path="/add-movie"
+          element={<AdminRoute />}
+        >
           <Route
             exact
             path="/add-movie"
-            element={<AdminRoute />}
-          >
-            <Route
-              exact
-              path="/add-movie"
-              element={<AddMovie />}
-            />
-          </Route>
+            element={<AddMovie />}
+          />
+        </Route>
+        <Route
+          exact
+          path="/delete-movie"
+          element={<AdminRoute />}
+        >
           <Route
             exact
             path="/delete-movie"
-            element={<AdminRoute />}
-          >
-            <Route
-              exact
-              path="/delete-movie"
-              element={<DeleteMovie />}
-            />
-          </Route>
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+            element={<DeleteMovie />}
+          />
         </Route>
-      </Routes>
-    </div>
-  );
-}
+        <Route path="/signin" element={<SignIn />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Route>
+    </Routes>
+  </div>
+);
 
 export default App;
