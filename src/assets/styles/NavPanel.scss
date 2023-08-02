@@ -14,11 +14,18 @@
   width: 80%;
 }
 
+.logout{
+  display: flex;
+  align-items: center;
+}
+
 .login-btn,
 .signup {
   font-size: small;
   border: 1px solid #98bf11;
   color: #98bf11;
+  display: flex;
+  align-items: center;
 }
 
 .login-btn:hover,

@@ -45,19 +45,19 @@ const ReservationForm = () => {
   };
 
   return (
-    <div className="col-md col container-main reservation-form-body p-0 new-reservation-form-body">
-      <div className="reservation-form-overlay col-md p-2 m-0 d-flex flex-column align-items-center justify-content-center new-reservation-form-overlay">
-        <h1 className="heading text-light text-uppercase text-center new-title">Create New Reservation</h1>
+    <div className="col-md col container-main reservation-form-body p-0 ">
+      <div className="reservation-form-overlay col-md p-2 m-0 d-flex flex-column align-items-center justify-content-center ">
+        <h1 className="heading text-light text-uppercase text-center ">Create New Reservation</h1>
         <hr className="w-50 border-top-2 border-light" />
-        <form onSubmit={handleSubmit} id="reservation-form" className="d-flex flex-column align-items-center g-6 new-reservation-form">
+        <form onSubmit={handleSubmit} id="reservation-form" className="d-flex flex-column align-items-center g-6 ">
           <div className="d-flex input-row align-items-center g-4">
             <label htmlFor="userId">
               Name:
-              <input className="p-2 form-control new-form-control" type="text" value={fullName} disabled />
+              <input className="p-2 form-control " type="text" value={fullName} disabled />
             </label>
             <label htmlFor="locationId">
               <div className="select-wrapper">
-                <select className="p-2 px-0 new-select" value={locationId} onChange={(e) => setLocationId(e.target.value)} name="locationId">
+                <select className="p-2 px-0 " value={locationId} onChange={(e) => setLocationId(e.target.value)} name="locationId">
                   <option value="">Select a location</option>
                   {locations.map((location) => (
                     <option key={location.id} value={location.id}>
@@ -65,14 +65,14 @@ const ReservationForm = () => {
                     </option>
                   ))}
                 </select>
-                <i className="fa-solid fa-angle-down new-angle-down" />
+                <i className="fa-solid fa-angle-down " />
               </div>
             </label>
           </div>
           <div className="d-flex input-row align-items-center g-4">
             <label htmlFor="movieId">
               <div className="select-wrapper">
-                <select className="p-2 px-0 new-select" onChange={(e) => setMovieId(e.target.value)} name="movieId">
+                <select className="p-2 px-0 " onChange={(e) => setMovieId(e.target.value)} name="movieId">
                   <option value="">Select a Movie</option>
                   {movies.map((movie) => (
                     <option
@@ -83,21 +83,21 @@ const ReservationForm = () => {
                     </option>
                   ))}
                 </select>
-                <i className="fa-solid fa-angle-down new-angle-down" />
+                <i className="fa-solid fa-angle-down " />
               </div>
             </label>
             <label htmlFor="startDate">
               From:&nbsp;
-              <input className="p-2 form-control new-form-control" type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} name="startDate" />
+              <input className="p-2 form-control " type="date" value={startDate} onChange={(e) => setStartDate(e.target.value)} name="startDate" />
             </label>
             <label htmlFor="endDate">
               To:&nbsp;
-              <input className="p-2 form-control new-form-control" type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} name="endDate" />
+              <input className="p-2 form-control" type="date" value={endDate} onChange={(e) => setEndDate(e.target.value)} name="endDate" />
             </label>
           </div>
           <div className="col-md-12 d-flex justify-content-center">
-            <button type="submit" className="col-md-3 btn rounded-pill mx-3 add-movie new-create-reservation">Create Reservation</button>
-            <button type="button" className="col-md-3 btn rounded-pill cancel-add new-cancel-button" onClick={() => navigate('/')}>Cancel</button>
+            <button type="submit" className="col-md-3 btn rounded-pill mx-3 add-movie ">Create Reservation</button>
+            <button type="button" className="col-md-3 btn rounded-pill cancel-add " onClick={() => navigate('/')}>Cancel</button>
           </div>
         </form>
       </div>
