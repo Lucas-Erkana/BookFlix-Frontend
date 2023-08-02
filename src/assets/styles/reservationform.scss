@@ -1,0 +1,66 @@
+.reservation-container {
+    background:
+      linear-gradient(0deg, rgba(146, 185, 10, 0.88), rgba(146, 185, 12, 0.88)),
+      url("../images/reservation.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh !important;
+    background-position: center !important;
+  }
+  
+  .new-reservation-form-overlay {
+    background:
+      linear-gradient(0deg, rgba(146, 185, 10, 0.88), rgba(146, 185, 12, 0.88)),
+      url("../images/reservation.png") !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    height: 100vh !important;
+    background-position: center !important;
+  }
+  
+  .new-title {
+    color: white !important;
+  }
+  
+  .new-form-control {
+    background-color: rgba(0, 0, 0, 0.175) !important;
+    border: 2px solid white !important;
+  }
+  
+  .new-form-control::placeholder {
+    color: white !important;
+  }
+  
+  .new-select {
+    background-color: rgba(0, 0, 0, 0.175) !important;
+    border: 2px solid white !important;
+    color: white !important;
+  }
+  
+  .new-angle-down {
+    color: white !important;
+  }
+  
+  .new-create-reservation {
+    border: 2px solid white !important;
+    color: white !important;
+    background-color: rgba(0, 0, 0, 0.175) !important;
+  }
+  
+  .new-create-reservation:hover {
+    background-color: white !important;
+    color: rgb(25, 135, 84) !important;
+  }
+  
+  .new-cancel-button {
+    background-color: transparent !important;
+    background-color: rgba(0, 0, 0, 0.175) !important;
+    border: 2px solid white !important;
+    color: white !important;
+  }
+  
+  .new-cancel-button:hover {
+    background-color: #dc3545 !important;
+    color: white !important;
+  }
+  
