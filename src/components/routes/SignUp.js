@@ -19,7 +19,7 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:3000/signup', {
+      const response = await axios.post('https://book-flix-app.onrender.com/signup', {
         user: {
           full_name: formData.fullName,
           email: formData.email,
@@ -39,7 +39,7 @@ const SignUp = () => {
 
   return (
 
-    <div className="col-md container-main d-flex flex-row align-items-center login p-0">
+    <div className="col-md signin-container d-flex flex-row align-items-center login p-0">
       <div className="col-md-12 d-flex flex-column align-items-center session-overlay justify-content-center">
         <div className="input-box col-md d-flex flex-column align-items-center justify-content-center">
           <div className="intro">

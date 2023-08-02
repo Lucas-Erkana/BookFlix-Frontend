@@ -39,7 +39,7 @@ function App() {
             <Route
               exact
               path="/reservations"
-              element={<ReservationForm />}
+              element={<Reservations />}
             />
           </Route>
           <Route

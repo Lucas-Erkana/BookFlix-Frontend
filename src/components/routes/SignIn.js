@@ -14,7 +14,7 @@ const SignIn = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:3000/login', {
+      .post('https://book-flix-app.onrender.com/login', {
         user: {
           email,
           password,
@@ -35,7 +35,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="col-md col-sm-12 col-xs-12 container-main d-flex flex-row align-items-center login p-0">
+    <div className="col-md col-sm-12 col-xs-12 signin-container d-flex flex-row align-items-center login p-0">
       <div className="col-md-12 d-flex flex-column align-items-center session-overlay justify-content-center">
         <div className="input-box col-md d-flex flex-column align-items-center justify-content-center">
           <div className="intro">
@@ -56,7 +56,7 @@ const SignIn = () => {
               />
             </div>
             <div className="input-field">
-              <div className="password-wrapper">
+              <div className="password-wrapper d-flex align-items-center justify-content-center">
                 <input
                   className="sign-form__input"
                   type={showPassword ? 'text' : 'password'}

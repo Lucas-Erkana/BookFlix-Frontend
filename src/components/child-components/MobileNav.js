@@ -24,13 +24,14 @@ const MobileNav = () => {
 
   const [showOffcanvas, setShowOffcanvas] = useState(false);
 
-  const handleLogout = () => {
-    localStorage.clear();
-    navigate('/signin');
-  };
-
   const handleOffcanvasClose = () => {
     setShowOffcanvas(false);
+  };
+
+  const handleLogout = () => {
+    localStorage.clear();
+    handleOffcanvasClose();
+    navigate('/signin');
   };
 
   return (
