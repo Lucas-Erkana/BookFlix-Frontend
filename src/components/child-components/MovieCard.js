@@ -21,7 +21,7 @@ const MovieCard = ({
           <h4 className="bold-font movie-name">{name}</h4>
         </NavLink>
         <hr className="dash" />
-        <div className="movie-rating-price">
+        <div className="movie-rating-price flex gap-2">
           <span className="bold-font gray-font">
             <i className="fa-sharp fa-solid fa-star-half-stroke" />
             {' '}
