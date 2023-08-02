@@ -45,10 +45,17 @@
 ![BookFlix](https://github.com/Lucash2022/BookFlix-Backend/assets/41428579/ed31191f-e5a7-4efc-9ce7-cf8cd40da20d)
 
 ### Back-end Repository
-- Here is the link of the [Back-End](https://github.com/Lucash2022/BookFlix-Backend)
+- Here is the link to the [Back-End](https://github.com/Lucash2022/BookFlix-Backend)
 
 ### Initial State of Kanban Board
 ![KanBan3](https://github.com/Lucash2022/BookFlix-Backend/assets/41428579/32a756e4-2194-4e96-a5c7-dd5a76f199c0)
+
+- We started as a team of five team members, but we ended with four.
+  - [Lucas Erkana](https://github.com/Lucash2022)
+  - [Kevin Toro](https://github.com/torobucci)
+  - [Samson Tush](https://github.com/SabaAhmad404)
+  - [Saba Ahmad](https://github.com/SamTush)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### 🚀 Live Demo <a name="live-demo"></a>
