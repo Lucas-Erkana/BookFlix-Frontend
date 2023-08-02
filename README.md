@@ -42,13 +42,18 @@
 </details>
 
 ### App Screenshot
-![screenshot](#)
+![BookFlix](https://github.com/Lucash2022/BookFlix-Backend/assets/41428579/ed31191f-e5a7-4efc-9ce7-cf8cd40da20d)
 
 ### Back-end Repository
 - Here is the link of the [Back-End](https://github.com/Lucash2022/BookFlix-Backend)
 
 ### Initial State of Kanban Board
 ![KanBan3](https://github.com/Lucash2022/BookFlix-Backend/assets/41428579/32a756e4-2194-4e96-a5c7-dd5a76f199c0)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### 🚀 Live Demo <a name="live-demo"></a>
+
+<a href="https://book-flix-frontend.vercel.app/">Bookflix</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
