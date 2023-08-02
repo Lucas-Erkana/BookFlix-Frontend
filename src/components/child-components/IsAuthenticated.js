@@ -1,4 +1,4 @@
-const  IsAuthenticated = () => {
+const IsAuthenticated = () => {
   const token = localStorage.getItem('token');
   return !!token;
 };

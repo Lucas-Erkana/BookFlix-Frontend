@@ -4,8 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import IsAdmin from './IsAdmin';
-import IsAuthenticated from './IsAuthenticated';
 import {
   FaFacebook,
   FaTwitter,
@@ -15,6 +13,8 @@ import {
   FaSignOutAlt,
 } from 'react-icons/fa';
 import { AiOutlineUserAdd } from 'react-icons/ai';
+import IsAdmin from './IsAdmin';
+import IsAuthenticated from './IsAuthenticated';
 import logo from '../../assets/images/bookflix-logo.png';
 
 const MobileNav = () => {
@@ -119,14 +119,14 @@ const MobileNav = () => {
                     ) : (
                       <>
                         <li>
-                          <NavLink to="/signin" className="login-btn btn btn-small"  onClick={handleOffcanvasClose}>
+                          <NavLink to="/signin" className="login-btn btn btn-small" onClick={handleOffcanvasClose}>
                             <FaSignInAlt />
                             &nbsp;
                             Log In
                           </NavLink>
                         </li>
                         <li className="nav-item">
-                          <NavLink to="/signup" className="signup btn btn-small"  onClick={handleOffcanvasClose}>
+                          <NavLink to="/signup" className="signup btn btn-small" onClick={handleOffcanvasClose}>
                             <AiOutlineUserAdd />
                             &nbsp;
                             Sign Up
@@ -150,31 +150,31 @@ const MobileNav = () => {
                     </Link>
                   </div>
                   <p className="text-center m-0">
-            <small>
-              &copy; 2023
-              {' '}
-              <strong>
-                <span>
-                  <a href="https://github.com/Lucash2022" className="intialsL">L</a>
-                </span>
+                    <small>
+                      &copy; 2023
+                      {' '}
+                      <strong>
+                        <span>
+                          <a href="https://github.com/Lucash2022" className="intialsL">L</a>
+                        </span>
 &nbsp;
-                <span>
-                  <a href="https://github.com/torobucci" className="intialsK">K</a>
-                </span>
+                        <span>
+                          <a href="https://github.com/torobucci" className="intialsK">K</a>
+                        </span>
 &nbsp;
-                <span>
-                  <a href="https://github.com/SabaAhmad404" className="intialsA">S</a>
-                </span>
+                        <span>
+                          <a href="https://github.com/SabaAhmad404" className="intialsA">S</a>
+                        </span>
 &nbsp;
-                <span>
-                  <a href="https://github.com/SamTush" className="intialsT">S</a>
-                </span>
+                        <span>
+                          <a href="https://github.com/SamTush" className="intialsT">S</a>
+                        </span>
 &nbsp;
-              </strong>
-              {' '}
-              Group
-            </small>
-          </p>
+                      </strong>
+                      {' '}
+                      Group
+                    </small>
+                  </p>
                 </div>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
