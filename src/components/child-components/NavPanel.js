@@ -60,7 +60,7 @@ const NavPanel = () => {
         </div>
         {/* Social Sharing Links */}
         <div className="social-sharing p-3 d-flex flex-column gap-2">
-          <ul className="d-flex justify-content-center gap-3 p-0">
+          <ul className="d-flex justify-content-center gap-3 p-0 my-2">
             {isLoggedIn ? (
               <li>
                 <button type="button" className="logout btn btn-outline-danger btn-small" onClick={handleLogout}>

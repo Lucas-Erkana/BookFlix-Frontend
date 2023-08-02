@@ -11,6 +11,7 @@ import ReservationForm from './components/routes/ReservationForm';
 import DeleteMovie from './components/routes/DeleteMovie';
 import PrivateRoute from './components/child-components/PrivateRoute';
 import AdminRoute from './components/child-components/AdminRoute';
+import './index.css';
 import './assets/styles/custom.scss';
 
 function App() {
