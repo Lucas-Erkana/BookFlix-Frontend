@@ -42,16 +42,16 @@
 </details>
 
 ### App Screenshot
-![BookFlix](https://github.com/Lucash2022/BookFlix-Backend/assets/41428579/ed31191f-e5a7-4efc-9ce7-cf8cd40da20d)
+![BookFlix](https://github.com/Lucas-Erkana/BookFlix-Backend/assets/41428579/ed31191f-e5a7-4efc-9ce7-cf8cd40da20d)
 
 ### Back-end Repository
-- Here is the link to the [Back-End](https://github.com/Lucash2022/BookFlix-Backend)
+- Here is the link to the [Back-End](https://github.com/Lucas-Erkana/BookFlix-Backend)
 
 ### Initial State of Kanban Board
-![KanBan3](https://github.com/Lucash2022/BookFlix-Backend/assets/41428579/32a756e4-2194-4e96-a5c7-dd5a76f199c0)
+![KanBan3](https://github.com/Lucas-Erkana/BookFlix-Backend/assets/41428579/32a756e4-2194-4e96-a5c7-dd5a76f199c0)
 
 - We started as a team of five team members, but we ended with four.
-  - [Lucas Erkana](https://github.com/Lucash2022)
+  - [Lucas Erkana](https://github.com/Lucas-Erkana)
   - [Kevin Toro](https://github.com/torobucci)
   - [Samson Tush](https://github.com/SabaAhmad404)
   - [Saba Ahmad](https://github.com/SamTush)
@@ -96,7 +96,7 @@ Clone this repository using the GitHub link provided below.
 In the terminal, go to your file directory and run this command.
 
 ```
-$ git clone https://github.com/Lucash2022/BookFlix-Frontend.git
+$ git clone https://github.com/Lucas-Erkana/BookFlix-Frontend.git
 ```
 
 
@@ -140,10 +140,10 @@ $ npm test
 
 👤 **Lucas Erkana**
 
-- GitHub: [@Lucash2022](https://github.com/Lucash2022)
+- GitHub: [@Lucas-Erkana](https://github.com/Lucas-Erkana)
 - Twitter: [@Lucas_David_22](https://twitter.com/@Lucas_David_22)
 - LinkedIn: [Lucas Erkana](https://www.linkedin.com/in/lucas-erkana/)
-- Frontend Mentor - [@Lucash2022](https://www.frontendmentor.io/profile/Lucash2022)
+- Frontend Mentor - [@Lucas-Erkana](https://www.frontendmentor.io/profile/Lucas-Erkana)
 
 👤 **Kevin Toro**
 - GitHub: [@torobucii](https://github.com/torobucci)
