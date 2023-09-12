@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
 import { useNavigate, Link } from 'react-router-dom';
+import url from '../../redux/url';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -19,7 +19,7 @@ const SignUp = () => {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://book-flix-app.onrender.com/signup', {
+      const response = await axios.post(`${url}signup`, {
         user: {
           full_name: formData.fullName,
           email: formData.email,

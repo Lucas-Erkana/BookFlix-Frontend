@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link, BrowserRouter } from 'react-router-dom';
+import url from '../../redux/url';
 
 const SignIn = () => {
   const [email, setEmail] = useState('');
@@ -10,7 +11,7 @@ const SignIn = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post('https://book-flix-app.onrender.com/login', {
+      .post(`${url}login`, {
         user: {
           email,
           password,

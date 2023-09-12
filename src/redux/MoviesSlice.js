@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import url from './url';
 
 const initialState = {
   movies: [],
@@ -19,13 +20,13 @@ const moviesSlice = createSlice(
 export const { setMovies } = moviesSlice.actions;
 
 const fetchMovies = () => async (dispatch) => {
-  const response = await fetch('https://book-flix-app.onrender.com/api/v1/movies');
+  const response = await fetch(`${url}api/v1/movies`);
   const data = await response.json();
   dispatch(setMovies(data));
 };
 
 const addMovie = (movie) => async (dispatch) => {
-  await fetch('https://book-flix-app.onrender.com/api/v1/movies', {
+  await fetch(`${url}/api/v1/movies`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -36,7 +37,7 @@ const addMovie = (movie) => async (dispatch) => {
 };
 
 const deleteMovie = (id) => async (dispatch) => {
-  await fetch(`https://book-flix-app.onrender.com/api/v1/movies/${id}`, {
+  await fetch(`${url}api/v1/movies/${id}`, {
     method: 'DELETE',
   });
   dispatch(fetchMovies());

@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import url from '../../redux/url';
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const SignIn = () => {
   const handleLogin = (e) => {
     e.preventDefault();
     axios
-      .post('https://book-flix-app.onrender.com/login', {
+      .post(`${url}login`, {
         user: {
           email,
           password,

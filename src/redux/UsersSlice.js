@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import url from './url';
 
 const initialState = {
   users: [],
@@ -26,7 +27,7 @@ export default userSlice.reducer;
 
 const fetchUsers = () => async (dispatch) => {
   try {
-    const response = await fetch('https://book-flix-app.onrender.com/api/v1/users');
+    const response = await fetch(`${url}api/v1/users`);
     if (!response.ok) {
       throw new Error('Failed to fetch users.');
     }
